@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="stylesmobile.css">
+    <link rel="stylesheet" href="dark-mode.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- Include Chart.js -->
+</head>
+<body>
+<!-- Mobile Navbar -->
+<div class="mobile-navbar" id="mobileNavbar">
+    <div class="logo">
+        <h4>Logo</h4>
+    </div>
+    <div class="menu-icon" id="menu-toggle">
+        <img src="/img/solar_hamburger-menu-broken.png" alt="Menu" id="hamburger">
+        <img src="/img/Icon Button.png" alt="Close" id="close-icon" style="display: none;">
+    </div>
+</div>
+
+<!-- Sidebar Navigation -->
+<div class="sidebar" id="sidebar">
+    <div class="logo">
+        <h4>Logo</h4>
+    </div>
+    <ul class="nav-items">
+        <li class="nav-item active">
+            <a href="#"><i class="fas fa-home"></i> <span class="nav-text">Home</span></a>
+        </li>
+        <li class="nav-item">
+            <a href="#"><i class="fas fa-calendar"></i> <span class="nav-text">Events</span></a>
+        </li>
+        <li class="nav-item">
+            <a href="#"><i class="fas fa-microphone"></i> <span class="nav-text">Speakers</span></a>
+        </li>
+        <li class="nav-item">
+            <a href="#"><i class="fas fa-file-alt"></i> <span class="nav-text">Reports</span></a>
+        </li>
+        <li class="nav-item">
+            <a href="#"><i class="fas fa-bell"></i> <span class="nav-text">Notifications</span></a>
+        </li>
+        <li class="nav-item">
+            <a href="#"><i class="fas fa-envelope"></i> <span class="nav-text">Messages</span></a>
+        </li>
+    </ul>
+
+    <button id="collapse-btn">
+        <span id="collapse-icon"><<</span> <span>Collapse</span>
+    </button>
+
+    <!-- Profile Section -->
+    <div class="profile-section">
+        <div class="dark-mode-toggle">
+            <label>
+                <input type="checkbox" id="dark-mode-checkbox">
+                <span class="slider"></span>
+                Dark Mode
+            </label>
+        </div>
+
+        <div class="profile-info">
+            <div class="profile-icon">
+                <img src="https://via.placeholder.com/50" alt="Profile Icon">
+            </div>
+            <div class="profile-details">
+                <p class="profile-name">John Doe</p>
+                <p class="profile-email">john.doe@gmail.com</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <p>Welcome! here's your summary</p>
+        <!-- Overview Section -->
+        <div class="overview">
+            <div class="overview-card">
+                <h4>Total Events</h4>
+                <div class="stat-info">
+                    <p>100,000</p>
+                    <img src="/img/arrow-up-right.png" alt="arrow">
+                    <span>+5.0%</span>
+                </div>
+            </div>
+            <div class="overview-card">
+                <h4>Active Speakers</h4>
+                <div class="stat-info2">
+                    <p>25</p>
+                    <img src="/img/arrow-down-right.png" alt="arrow">
+                    <span>-5.0%</span>
+                </div>
+            </div>
+            <div class="overview-card">
+                <h4>Total Registrations</h4>
+                <div class="stat-info">
+                    <p>300</p>
+                    <img src="/img/arrow-up-right.png" alt="arrow">
+                    <span>+5.0%</span>
+                </div>
+            </div>
+            <div class="overview-card">
+                <h4>Total Revenue</h4>
+                <div class="stat-info">
+                    <p>$500,000</p>
+                    <img src="/img/arrow-up-right.png" alt="arrow">
+                    <span>+5.0%</span>
+                </div>
+            </div>
+        </div>
+
+        <p style="font-size: 17px;" id="eventname">Event Registrations per month</p>
+        <div class="content-wrapper">
+            <!-- Event Registrations Chart -->
+            <div class="chart-container">
+                <canvas id="eventChart"></canvas>
+            </div>
+
+            <div class="carousel">
+                <button class="carousel-btn" id="prev-btn">
+                    <img src="/img/Right Button.png" alt="Previous" />
+                </button>
+                <div class="carousel-items">
+                    <div class="carousel-item">
+                        <img src="/img/Slide2.png" alt="News 1">
+                        <h6 style="font-size: 11px; margin-bottom: 55px;" class="carousel-caption">Latest News & Updates</h6> <!-- Caption inside carousel-item -->
+                        <p style="font-size: 11px;" class="carousel-caption">Turpis interdum nunc varius ornare dignissim pretium. Massa ornare quis aliquet sed vitae. Sed velit nisi, fermentum erat. Fringilla purus, erat fringilla tincidunt quisque non. Pellentesque in ut tellus.</p>
+                        <div class="grad"></div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="/img/Slide.png" alt="News 2">
+                        <h6 style="font-size: 11px; margin-bottom: 55px;" class="carousel-caption">Latest News & Updates</h6> <!-- Caption inside carousel-item -->
+                        <p style="font-size: 11px;" class="carousel-caption">Turpis interdum nunc varius ornare dignissim pretium. Massa ornare quis aliquet sed vitae. Sed velit nisi, fermentum erat. Fringilla purus, erat fringilla tincidunt quisque non. Pellentesque in ut tellus.</p>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="/img/Slide (1).png" alt="News 3">
+                        <h6 style="font-size: 11px; margin-bottom: 55px;" class="carousel-caption">Latest News & Updates</h6> <!-- Caption inside carousel-item -->
+                        <p style="font-size: 11px;" class="carousel-caption">Turpis interdum nunc varius ornare dignissim pretium. Massa ornare quis aliquet sed vitae. Sed velit nisi, fermentum erat. Fringilla purus, erat fringilla tincidunt quisque non. Pellentesque in ut tellus.</p>
+                    </div>
+                </div>
+                <button class="carousel-btn" id="next-btn">
+                    <img src="/img/left Button.png" alt="Next" />
+                </button>
+            </div>
+        </div>
+
+        <!-- Events History Table -->
+        <h3>Events History</h3>
+                <!-- Filters and Results Display Row -->
+    <div class="filters">
+        <input type="text" id="searchField" placeholder="Search...">
+        
+        <select id="dateFilter">
+            <option value="">Date</option>
+            <option value="2024-10-15">2024-10-15</option>
+            <option value="2024-11-05">2024-11-05</option>
+            <option value="2024-12-01">2024-12-01</option>
+        </select>
+
+        <select id="statusFilter">
+            <option value="">Status</option>
+            <option value="completed">Completed</option>
+            <option value="inProgress">In Progress</option>
+            <option value="upcoming">Upcoming</option>
+        </select>
+
+        <select id="nameFilter">
+            <option value="">Name</option>
+            <option value="Jane Doe">Jane Doe</option>
+            <option value="Dr. Peter Smith">Dr. Peter Smith</option>
+        </select>
+
+                    <!-- Sort and Export Section -->
+                    <div class="right-filters">
+                        <span class="results-display">Displaying 100 results</span>
+                        <span>Sort:</span><select id="sortFilter">
+                            <option value="">Most Recent</option>
+                            <option value="completed">Completed</option>
+                            <option value="inProgress">In Progress</option>
+                            <option value="upcoming">Upcoming</option>
+                        </select>
+                        <button id="exportBtn">:</button>
+                        <button id="exportBtn"><img src="/img/download.png">Export</button>
+                    </div>
+    </div>
+
+    <div class="table-container">
+        <table class="event-table">
+            <thead>
+                <tr>
+                    <th>Event Name</th>
+                    <th>Date</th>
+                    <th>Speaker</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="event-row" data-event-name="Blockchain Revolution Conference" data-event-date="2024-10-05" data-event-speaker="Dr. Peter Smith" data-event-status="Upcoming">
+                    <td>Cloud Innovation Summit</td>
+                    <td>2024-10-15</td>
+                    <td>Jane Doe</td>
+                    <td><span class="status completed">Completed</span></td>
+                </tr>
+                <tr class="event-row" data-event-name="Blockchain Revolution Conference" data-event-date="2024-10-05" data-event-speaker="Dr. Peter Smith" data-event-status="Upcoming">
+                    <td>Blockchain Revolution Conference</td>
+                    <td>2024-11-05</td>
+                    <td>Dr. Peter Smith</td>
+                    <td><span class="status in-progress">In Progress</span></td>
+                </tr>
+                <tr class="event-row" data-event-name="Blockchain Revolution Conference" data-event-date="2024-10-05" data-event-speaker="Dr. Peter Smith" data-event-status="Upcoming">
+                    <td>AI in Healthcare Symposium</td>
+                    <td>2024-12-01</td>
+                    <td>Dr. Aisha Malik</td>
+                    <td><span class="status completed">Completed</span></td>
+                </tr>
+                <tr>
+                    <td>Future of Fintech Forum</td>
+                    <td>2024-10-25</td>
+                    <td>John Lee</td>
+                    <td><span class="status completed">Completed</span></td>
+                </tr>
+                <tr>
+                    <td>Data Analytics in Business</td>
+                    <td>2024-11-12</td>
+                    <td>Rachel Moore</td>
+                    <td><span class="status completed">Completed</span></td>
+                </tr>
+                <tr>
+                    <td>Sustainable Energy Expo</td>
+                    <td>2024-09-28</td>
+                    <td>Prof. Alan Green</td>
+                    <td><span class="status completed">Completed</span></td>
+                </tr>
+                <tr>
+                    <td>Web3 Interfaces Workshop</td>
+                    <td>2024-10-10</td>
+                    <td>Kevin Adams</td>
+                    <td><span class="status in-progress">In Progress</span></td>
+                </tr>
+                <tr>
+                    <td>Cybersecurity for Startups</td>
+                    <td>2024-11-19</td>
+                    <td>Emily Zhang</td>
+                    <td><span class="status completed">Completed</span></td>
+                </tr>
+                <tr>
+                    <td>Smart Cities Forum</td>
+                    <td>2024-10-18</td>
+                    <td>Dr. Maria Hernandez</td>
+                    <td><span class="status in-progress">In Progress</span></td>
+                </tr>
+                <tr>
+                    <td>Tech Safari Mixer</td>
+                    <td>2024-09-30</td>
+                    <td>Guest Panel</td>
+                    <td><span class="status in-progress">In Progress</span></td>
+                </tr>
+            </tbody>
+        </table>
+    
+        <div class="eventbottom">
+            <div class="pagination">
+                <button class="page-btn">&lt;</button>
+                <button class="page-btn active">1</button>
+                <button class="page-btn2">2</button>
+                <button class="page-btn2">3</button>
+                <button class="page-btn">&gt;</button>
+            </div>
+        
+            <div class="rows-per-page">
+                Show: 
+                <select>
+                    <option value="10">10 rows</option>
+                    <option value="20">20 rows</option>
+                    <option value="30">30 rows</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    
+
+
+        <!-- <div class="events-table">
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Event Name</th>
+                        <th>Date</th>
+                        <th>Speaker</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="event-row" data-event-name="Tech Future Forum" data-event-date="2024-11-10" data-event-speaker="Jane Doe" data-event-status="Upcoming">
+                        <td>Cloud Innovation Summit</td>
+                        <td>2024-10-15</td>
+                        <td>Jane Doe</td>
+                        <td>Completed</td>
+                    </tr>
+                    <tr class="event-row" data-event-name="Blockchain Revolution Conference" data-event-date="2024-10-05" data-event-speaker="Dr. Peter Smith" data-event-status="Upcoming">
+                        <td>Blockchain Revolution Conference</td>
+                        <td>2024-10-05</td>
+                        <td>Dr. Peter Smith</td>
+                        <td>Upcoming</td>
+                    </tr>
+                    <tr class="event-row" data-event-name="Blockchain Revolution Conference" data-event-date="2024-10-05" data-event-speaker="Dr. Peter Smith" data-event-status="Upcoming">
+                        <td>Blockchain Revolution Conference</td>
+                        <td>2024-10-05</td>
+                        <td>Dr. Peter Smith</td>
+                        <td>Upcoming</td>
+                    </tr>
+                    <tr class="event-row" data-event-name="Blockchain Revolution Conference" data-event-date="2024-10-05" data-event-speaker="Dr. Peter Smith" data-event-status="Upcoming">
+                        <td>Blockchain Revolution Conference</td>
+                        <td>2024-10-05</td>
+                        <td>Dr. Peter Smith</td>
+                        <td>Upcoming</td>
+                    </tr>
+                    <tr>
+                        <td>Blockchain Revolution Conference</td>
+                        <td>2024-10-05</td>
+                        <td>Dr. Peter Smith</td>
+                        <td>Upcoming</td>
+                    </tr>
+                    <tr>
+                        <td>Blockchain Revolution Conference</td>
+                        <td>2024-10-05</td>
+                        <td>Dr. Peter Smith</td>
+                        <td>Upcoming</td>
+                    </tr>
+                    <tr>
+                        <td>Blockchain Revolution Conference</td>
+                        <td>2024-10-05</td>
+                        <td>Dr. Peter Smith</td>
+                        <td>Upcoming</td>
+                    </tr>
+                    <tr>
+                        <td>Blockchain Revolution Conference</td>
+                        <td>2024-10-05</td>
+                        <td>Dr. Peter Smith</td>
+                        <td>Upcoming</td>
+                    </tr>
+                    <tr>
+                        <td>Blockchain Revolution Conference</td>
+                        <td>2024-10-05</td>
+                        <td>Dr. Peter Smith</td>
+                        <td>Upcoming</td>
+                    </tr>
+                    <tr>
+                        <td>Blockchain Revolution Conference</td>
+                        <td>2024-10-05</td>
+                        <td>Dr. Peter Smith</td>
+                        <td>Upcoming</td>
+                    </tr>
+                    <tr>
+                        <td>Blockchain Revolution Conference</td>
+                        <td>2024-10-05</td>
+                        <td>Dr. Peter Smith</td>
+                        <td>Upcoming</td>
+                    </tr>
+                    <tr>
+                        <td>Blockchain Revolution Conference</td>
+                        <td>2024-10-05</td>
+                        <td>Dr. Peter Smith</td>
+                        <td>Upcoming</td>
+                    </tr>
+                    <tr>
+                        <td>Blockchain Revolution Conference</td>
+                        <td>2024-10-05</td>
+                        <td>Dr. Peter Smith</td>
+                        <td>Upcoming</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div> -->
+
+<!-- Modal for Event Details -->
+<div id="eventModal" class="modal">
+    <div class="modal-content">
+        <span class="close-btn">&times;</span>
+        <h3 id="modal-event-name">Event Name</h3>
+        <p id="modal-event-date">Event Date</p>
+        <p id="modal-event-description">Event Description</p>
+        
+        <!-- Speakers Section -->
+        <div id="modal-speakers" class="speakers">
+            <!-- Placeholder for dynamically added speaker images -->
+        </div>
+
+        <!-- Attendees Info -->
+        <p id="modal-attendees">3 Guest Speakers: Speaker Name A, Speaker Name B,<br> Speaker Name C.<br>300 Attendees</p>
+
+        <!-- Action Buttons -->
+        <div class="modal-actions">
+            <button class="edit-btn">Edit</button>
+            <button class="delete-btn">Delete</button>
+            <button class="complete-btn">Mark as completed</button>
+        </div>
+    </div>
+</div>
+
+
+    <script src="script.js"></script>
+    <!-- <script>
+        const darkModeButton = document.getElementById('dark-mode-btn');
+
+        darkModeButton.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+        });
+    </script> -->
+</body>
+</html>

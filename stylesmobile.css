@@ -1,0 +1,257 @@
+
+
+/* General Mobile Styles */
+
+/* Mobile Navbar Styles */
+/* Navbar Styles for Mobile */
+.mobile-navbar {
+    display: none;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #ffffff;
+    color: rgb(48, 45, 45);
+    padding: 10px 20px;
+    border-bottom: 0.7px solid #ccc;
+    z-index: 1000;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.mobile-navbar .logo h4 {
+    margin: 0;
+}
+
+.mobile-navbar .menu-icon {
+    font-size: 1.5em;
+    cursor: pointer;
+    margin-right: 30px;
+}
+
+/* Hamburger and close icon styles */
+.menu-icon img {
+    width: 30px; /* Adjust size as needed */
+    cursor: pointer;
+}
+
+/* Sidebar transition */
+/* .sidebar {
+    width: 0;
+    overflow: hidden;
+    transition: width 0.5s ease-in-out;
+} */
+
+
+
+
+
+/* Media Queries for Mobile View */
+@media (max-width: 768px) {
+    body {
+        display: block;
+    }
+
+    .sidebar {
+        left: -120%;
+        width: 100%;
+        z-index: 999;
+        transition: width 0.5s ease-in-out;
+    }
+
+    .sidebar .logo {
+        margin-top: -50px;
+    }
+
+    .sidebar.open {
+        left: 0;
+    }
+
+    .mobile-navbar {
+        display: flex;
+    }
+
+    .desktop-navbar, #collapse-btn {
+        display: none;
+    }
+
+    .sidebar.collapsed {
+        width: 100%;
+    }
+}
+
+
+/* Media Query for mobile screens */
+@media only screen and (max-width: 768px) {
+
+    /* Adjust the main content padding for mobile */
+    .main-content {
+        margin-left: 0;
+        margin-top: 35px;
+        padding: 10px;
+        width: 100%; /* Full width */
+    }
+
+    .main-content p {
+        font-size: 21px;
+        color: #000;
+    }
+
+    #eventname {
+        font-size: 21px;
+    }
+
+    /* Overview Section for Mobile: stack cards vertically */
+    .overview {
+        display: flex;
+        flex-direction: column; /* Stacks the overview cards vertically */
+    }
+
+    .overview-card {
+        width: 91%; /* Full width of the screen */
+        margin-right: 0;
+        margin-bottom: 10px; /* Add margin at the bottom between cards */
+        border: 1px solid #ccc;
+        box-shadow: 0px 4px 8px rgb(255, 255, 255);
+    }
+
+    .overview-card p {
+        margin: 5px 0 0 0;
+        font-size: 1.7em;
+        font-weight: bold;
+        color: #181717;
+    }
+
+    .overview-card h4 {
+        margin: 0;
+        font-size: 1.2em;
+    }
+
+    /* Content Wrapper for Mobile: Stack the chart and carousel vertically */
+    .content-wrapper {
+        display: flex;
+        flex-direction: column; /* Stack vertically */
+    }
+
+    /* Chart and Carousel containers for mobile view */
+    .chart-container, .carousel {
+        width: 91%; /* Full width for both chart and carousel */
+        margin-bottom: 20px; /* Space between them */
+    }
+
+    .carousel-caption {
+        position: absolute;
+        bottom: 10px; /* Push the caption towards the bottom of the image */
+        left: 20px; /* Adjust to align text with the image */
+        color: #ffffff;
+        font-size: 1.2em;
+        /* background-color: rgba(0, 0, 0, 0.5); Add background for better readability */
+        padding: 5px 10px;
+        border-radius: 5px;
+    }
+
+    /* Carousel Buttons */
+    .carousel-btn {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: transparent;
+        /* background-color: rgba(0, 0, 0, 0.5); Semi-transparent background */
+        color: #fff;
+        border: none;
+        padding: 10px;
+        font-size: 1.5em;
+        cursor: pointer;
+        z-index: 1; /* Ensure the buttons are on top of the images */
+    }
+
+    #prev-btn {
+        left: 295px; /* Position prev button to the left */
+    }
+
+    #next-btn {
+        right: 295px; /* Position next button to the right */
+    }
+
+    .carousel-btn:hover {
+        background-color: transparent;
+    }
+
+    .stat-info img {
+        width: 18px; /* Adjust the size of the arrow image */
+        height: 18px;
+        margin-right: 4px; /* Space between image and span */
+        margin-left: 2px; /* Space between image and span */
+    }
+    
+    .stat-info span {
+        font-size: 0.9em; /* Make the span smaller */
+        color: #3ba353; /* Adjust color if necessary */
+        margin-right: 10px; /* Adds spacing before the number */
+    }
+    .stat-info2 {
+        display: flex;
+        align-items: center; /* Align items side by side */
+        margin-bottom: 5px; /* Adds space below this row */
+    }
+    
+    .stat-info2 img {
+        width: 18px; /* Adjust the size of the arrow image */
+        height: 18px;
+        margin-right: 4px; /* Space between image and span */
+        margin-left: 2px; /* Space between image and span */
+    }
+    
+    .stat-info2 span {
+        font-size: 0.9em; /* Make the span smaller */
+        color: #f71d1d; /* Adjust color if necessary */
+        margin-right: 10px; /* Adds spacing before the number */
+    }
+    
+}
+
+
+/* Extra small screens (max-width: 480px) */
+@media (max-width: 480px) {
+
+    .overview-card {
+        width: calc(100% - 60px); /* Full width of the screen */
+        /* margin-right: 0;
+        margin-bottom: 10px; 
+        border: 1px solid #ccc;
+        box-shadow: 0px 4px 8px rgb(255, 255, 255); */
+    }
+    /* .sidebar {
+        width: 60px; 
+    }
+
+    .sidebar.collapsed {
+        width: 50px; 
+    } */
+
+    /* .main-content {
+        margin-left: 60px; 
+        width: calc(100% - 60px);
+    } */
+
+    /* .overview {
+        gap: 5px; 
+    }
+
+    .overview-card {
+        padding: 10px; 
+    }
+
+    .carousel-item p {
+        font-size: 10px; 
+    } */
+    .carousel-caption {
+        position: absolute;
+        bottom: 10px; /* Push the caption towards the bottom of the image */
+        left: 20px; /* Adjust to align text with the image */
+        color: #ffffff;
+        font-size: 1.2em;
+        /* background-color: rgba(0, 0, 0, 0.5); Add background for better readability */
+        padding: 5px 10px;
+        border-radius: 5px;
+    }
+}

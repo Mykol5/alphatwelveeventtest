@@ -1,0 +1,736 @@
+/* Dark Mode Styles */
+body.dark-mode {
+    background-color: #484554;
+ /* Dark mode background */
+    color: #ecf0f1; /* Dark mode text color */
+    font-family: Inter, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+/* Sidebar Styles */
+.sidebar.dark-mode {
+    width: 220px;
+    background-color: #6A6676; /* Dark sidebar background */
+    color: #ecf0f1; /* Text color for sidebar */
+    padding: 20px;
+    position: fixed;
+    height: 100vh;
+    transition: width 0.5s ease-in-out;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5); /* Darker shadow */
+    z-index: 100;
+}
+
+.sidebar.dark-mode.collapsed {
+    width: 80px;
+}
+
+.sidebar.dark-mode .logo h4 {
+    text-align: left;
+    transition: opacity 0.3s ease;
+    margin-left: 12px;
+}
+
+.sidebar.dark-mode.collapsed .logo h3 {
+    opacity: 0;
+}
+
+.sidebar.dark-mode ul {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 50px;
+}
+
+.nav-item.dark-mode {
+    color: #ecf0f1; /* Text color for nav links */
+    margin: 20px 0;
+    display: flex;
+    align-items: center;
+}
+
+.nav-item a.dark-mode {
+    color: #ecf0f1; /* Text color for nav links */
+    text-decoration: none;
+    padding-left: 10px;
+    display: flex;
+    align-items: center;
+    transition: opacity 0.3s ease;
+}
+
+.nav-item i.dark-mode {
+    margin-right: 10px;
+    transition: margin-right 0.5s ease;
+}
+
+/* Dark mode styles for nav items */
+.sidebar.dark-mode .nav-item a {
+    color: #fff; /* Light text color for dark mode */
+    /* background-color: #444; /* Dark background for dark mode */
+}
+
+
+/* Hide text when sidebar is collapsed */
+.sidebar.dark-mode.collapsed .nav-item .nav-text {
+    display: none; /* Hide text */
+}
+
+/* Keep icons visible */
+.sidebar.dark-mode.collapsed .nav-item i {
+    opacity: 1; /* Keep icons visible */
+}
+
+/* Profile Section */
+.profile-section.dark-mode {
+    margin-top: auto;
+    text-align: left;
+}
+
+.profile-info.dark-mode {
+    display: flex;
+    align-items: center; /* Align items vertically center */
+    margin-bottom: 0px;
+}
+
+.profile-icon img {
+    border-radius: 50%; /* Ensure the image is circular */
+    width: 40px; /* Set a fixed width */
+    height: 40px; /* Set a fixed height */
+    margin-right: 10px; /* Space between icon and details */
+}
+
+.profile-details.dark-mode {
+    font-size: 13px;
+    display: flex;
+    flex-direction: column; /* Stack name and email vertically */
+    margin: 0; /* Remove any default margin */
+}
+
+.profile-name.dark-mode {
+    font-weight: bold;
+    margin: 0; /* Remove margin to minimize space */
+}
+
+.profile-email.dark-mode {
+    font-size: 0.85em;
+    margin: 0; /* Remove margin to minimize space */
+}
+
+/* Hide profile details when collapsed */
+.sidebar.dark-mode.collapsed .profile-details {
+    display: none;
+}
+
+
+
+/* Collapse Button */
+#collapse-btn.dark-mode {
+    background-color: #6A6676; /* Button color */
+    color: white; /* Button text color */
+    padding: 5px;
+    border: none;
+    cursor: pointer;
+    width: 0%;
+    text-align: left;
+}
+
+#collapse-btn.dark-mode:hover {
+    background-color: transparent;
+}
+
+/* Collapse Button Icon */
+#collapse-icon.dark-mode {
+    margin-right: 10px;
+    transition: transform 0.5s ease-in-out;
+}
+
+/* Main Content Styles */
+.main-content.dark-mode {
+    margin-left: 260px;
+    padding: 20px;
+    padding-right: 5px;
+    width: calc(100% - 250px);
+    transition: margin-left 0.5s ease-in-out, width 0.5s ease-in-out;
+}
+
+.sidebar.dark-mode.collapsed ~ .main-content {
+    margin-left: 120px;
+    width: calc(100% - 80px);
+}
+
+/* Overview */
+.overview.dark-mode {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.overview-card.dark-mode {
+    background-color: #6A6676; /* Dark background for overview cards */
+    margin-top: 3px;
+    width: 20%;
+    height: auto;
+    text-align: left;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+    transition: transform 0.2s;
+    color: #ecf0f1; /* Text color for overview cards */
+}
+
+.overview-card.dark-mode h4 {
+    margin: 0; /* Remove default margin for h4 */
+    font-size: 0.75em; /* Adjust font size */;
+}
+
+.overview-card.dark-mode p {
+    margin: 5px 0 0 0; /* Add some spacing between h4 and p */
+    font-size: 1.1em; /* Adjust font size for paragraph */
+    font-style: bold;
+}
+
+.overview-card.dark-mode:hover {
+    transform: scale(1.05);
+}
+
+/* Chart Container */
+.chart-container.dark-mode {
+    background-color: #6A6676; /* Dark background for chart container */
+    color: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+/* Carousel */
+.carousel.dark-mode {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.carousel-items.dark-mode {
+    display: flex;
+    overflow: hidden;
+    width: 80%;
+}
+
+.carousel-item.dark-mode {
+    min-width: 100%;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item img.dark-mode {
+    width: 100%;
+    height: auto;
+}
+
+/* Carousel Buttons */
+.carousel-btn.dark-mode {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: transparent;
+    /* background-color: rgba(0, 0, 0, 0.5); Semi-transparent background */
+    color: #fff;
+    border: none;
+    padding: 10px;
+    font-size: 1.5em;
+    cursor: pointer;
+    z-index: 1; /* Ensure the buttons are on top of the images */
+}
+
+#prev-btn.dark-mode {
+    left: 430px; /* Position prev button to the left */
+}
+
+#next-btn.dark-mode {
+    right: 430px; /* Position next button to the right */
+}
+
+.carousel-btn.dark-mode:hover {
+    background-color: transparent;
+}
+
+
+/* Events Table */
+/* General Table Styles for Dark Mode */
+.dark-mode .table-container {
+    margin: 20px;
+    margin-left: 0px;
+    font-family: Arial, sans-serif;
+}
+
+.dark-mode .event-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 15px;
+    background-color: #6A6676; /* Dark background */
+}
+
+.dark-mode .event-table th, .dark-mode .event-table td {
+    padding: 12px 15px;
+    text-align: left;
+}
+
+.dark-mode .event-table thead {
+    background-color: #ADA9BB; /* Dark header background */
+}
+
+.dark-mode .event-table thead th {
+    font-size: 14px;
+    color: #ffffff; /* Lighter text for header */
+}
+
+.dark-mode .event-table tbody tr {
+    border-bottom: 1px solid #6A6676; /* Darker border */
+}
+
+.dark-mode .event-table tbody tr:nth-child(even) {
+    background-color: #6A6676; /* Alternate row background */
+}
+
+.dark-mode .event-table tbody tr:hover {
+    background-color: #ADA9BB; /* Row hover background */
+    cursor: pointer;
+}
+
+.dark-mode .event-table td {
+    color: #e2e8f0; /* Lighter text color */
+    font-size: 13px;
+}
+
+/* Status Labels for Dark Mode */
+/* Status Labels with Point for Dark Mode */
+.dark-mode .status {
+    padding: 2px 8px;
+    border-radius: 15px;
+    font-size: 10.5px;
+    font-weight: bold;
+    position: relative;
+    padding-left: 25px; /* Adjust for the circle */
+}
+
+/* Point (Circle) before Completed Status */
+.dark-mode .status.completed::before {
+    content: "";
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 6px;
+    height: 6px;
+    background-color: #27ae60; /* Green color for completed */
+    border-radius: 50%; /* Makes it a circle */
+}
+
+/* Point (Circle) before In-Progress Status */
+.dark-mode .status.in-progress::before {
+    content: "";
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 6px;
+    height: 6px;
+    background-color: #3498db; /* Blue color for in-progress */
+    border-radius: 50%; /* Makes it a circle */
+}
+
+
+.dark-mode .status.completed {
+    background-color: transparent; /* Dark green */
+    color: #65DDB5; /* Light green text */
+    border: 1px solid #65DDB5;
+}
+
+.dark-mode .status.in-progress {
+    background-color: transparent; /* Darker blue */
+    color: #77B1FF; /* Light blue text */
+    border: 1px solid #77B1FF;
+}
+
+/* Pagination for Dark Mode */
+.eventbottom {
+    display: flex;
+    justify-content: space-between; /* Aligns pagination to the left and rows per page to the right */
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.dark-mode .pagination {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.dark-mode .page-btn {
+    padding: 5px 10px;
+    margin: 0 5px;
+    border: none;
+    background-color: #6A6676; /* Darker button background */
+    color: #8576FF; /* Lighter button text */
+    border-radius: 1px;
+    cursor: pointer;
+}
+
+.dark-mode .page-btn2 {
+    padding: 5px 10px;
+    margin: 0 5px;
+    border: none;
+    background-color: transparent;
+    color: #cbd5e1; /* Lighter button text */
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.dark-mode .page-btn.active {
+    background-color: #8576FF; /* Bright active button */
+    color: #ffffff; /* White text */
+    border-radius: 45%;
+}
+
+.dark-mode .page-btn:hover {
+    background-color: #8576FF; /* Lighter hover button */
+}
+
+/* Rows per Page Dropdown for Dark Mode */
+.dark-mode .rows-per-page {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-bottom: 10px;
+    font-size: 11px;
+    color: #e2e8f0; /* Lighter text */
+}
+
+.dark-mode .rows-per-page select {
+    margin-left: 5px;
+    padding: 5px 5px;
+    font-size: 11px;
+    background-color: #6A6676; /* Dark background for dropdown */
+    color: #e2e8f0; /* Light text for dropdown */
+    border: 1px solid #475569; /* Border color for dropdown */
+}
+
+
+/* Dark Mode Styles */
+
+/* Filters Section */
+.filters.dark-mode {
+    background-color: #484554;
+    color: #ecf0f1;  /* Dark mode text color */
+}
+
+/* Input and Select Fields in Dark Mode */
+.filters.dark-mode input[type="text"], 
+.filters.dark-mode select {
+    background-color: #6A6676;/* Dark mode input background */
+    color: #ecf0f1; /* Dark mode input text */
+    border: none;
+}
+
+/* Right Filters Section in Dark Mode */
+.right-filters.dark-mode {
+    gap: 10px; /* Spacing between elements in dark mode */
+}
+
+/* Results Display in Dark Mode */
+.results-display.dark-mode {
+    color: #bdc3c7; /* Lighter text color for dark mode */
+}
+
+/* Button Styles in Dark Mode */
+button.dark-mode {
+    background-color: #6A6676; /* Dark background */
+    color: #ecf0f1; /* Light text color */
+    border: none;
+}
+
+/* Button Hover in Dark Mode */
+button.dark-mode:hover {
+    opacity: 0.8; /* Hover effect remains the same */
+}
+
+
+/* Modal */
+.modal.dark-mode {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.85); /* Dark overlay */
+    justify-content: center;
+    align-items: center;
+    z-index: 9999; /* Ensures modal is above other content */
+}
+
+/* Modal Content */
+.modal-content.dark-mode {
+    background-color: #484554; /* Dark background for modal content */
+    padding: 20px;
+    border-radius: 0px;
+    width: 310px;
+    height: 310px;
+    max-width: 80%;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4); /* Darker shadow */
+    position: relative;
+    font-family: Arial, sans-serif;
+    text-align: left;
+}
+
+.modal-content.dark-mode h3 {
+    margin: 0 0 10px;
+    font-size: 18px;
+    color: #ffffff; /* White text */
+}
+
+.modal-content.dark-mode p {
+    margin: 5px 0;
+    font-size: 14px;
+    color: #b3b3b3; /* Lighter gray text */
+}
+
+.speakers.dark-mode {
+    margin: 10px 0;
+}
+
+.speakers img.dark-mode {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+
+/* Action Buttons */
+.modal-actions.dark-mode {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.modal-actions button.dark-mode {
+    padding: 8px 12px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.edit-btn.dark-mode {
+    background-color: #eceaea; /* Dark button */
+    color: #000;
+}
+
+.edit-btn.dark-mode:hover {
+    background-color: #ffffff; /* Hover state */
+    color: #000;
+}
+
+.delete-btn.dark-mode {
+    background-color: #F43F5E; /* Red for delete */
+    color: #fff;
+}
+
+.delete-btn.dark-mode:hover {
+    background-color: #f55d76;
+}
+
+.complete-btn.dark-mode {
+    background-color: #8576FF; /* Purple button */
+    color: #fff;
+}
+
+.complete-btn.dark-mode:hover {
+    background-color: #aea5f8;
+}
+
+/* Close button */
+.close-btn.dark-mode {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 18px;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.close-btn.dark-mode:hover {
+    color: #ff4c4c; /* Hover color for close button */
+}
+
+
+    /* Styles for the toggle switch */
+    .dark-mode-toggle {
+        display: flex;
+        align-items: center;
+        margin: 20px; /* Space around the toggle */
+        margin-left: 5px;
+    }
+
+    .dark-mode-toggle label {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+    }
+
+    .dark-mode-toggle input {
+        display: none; /* Hide the default checkbox */
+    }
+
+    .slider {
+        width: 34px;
+        height: 20px;
+        background-color: #ccc;
+        border-radius: 34px;
+        position: relative;
+        margin-right: 10px; /* Space between slider and text */
+        transition: background-color 0.3s;
+    }
+
+    .slider:before {
+        content: "";
+        position: absolute;
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        background-color: white;
+        transition: transform 0.3s;
+    }
+
+    /* Checked state styles */
+    input:checked + .slider {
+        background-color: #7019e2; /* Color when checked */
+    }
+
+    input:checked + .slider:before {
+        transform: translateX(14px); /* Move the circle to the right */
+    }
+
+    /* Hide dark mode toggle when sidebar is collapsed */
+    .sidebar.collapsed .dark-mode-toggle {
+        display: none; /* Hide the toggle when collapsed */
+    }
+
+
+
+    /* Navbar Styles for Mobile */
+.dark-mode .mobile-navbar {
+    /* display: none; */
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #6A6676;
+    color: rgb(247, 244, 244);
+    padding: 10px 20px;
+    /* border-bottom: 0.7px solid #ccc; */
+    z-index: 1000;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+
+/* Media Queries for Dark Mode (Mobile) */
+@media (max-width: 768px) {
+    .dark-mode .sidebar.open {
+        left: 0;
+        width: 100%; /* Ensure full width on open in dark mode */
+    }
+
+    .dark-mode .sidebar .logo {
+        margin-top: -15px;
+    }
+    /* .dark-mode .sidebar {
+        left: -120%;
+        width: 100%;
+        z-index: 999;
+        transition: width 0.5s ease-in-out;
+    } */
+
+    .dark-mode .main-content {
+        margin-left: 0;
+        margin-top: 35px;
+        padding: 10px;
+        width: 100%; /* Full width */
+    }
+
+    .dark-mode .main-content p {
+        font-size: 21px;
+        color: #ffffff;
+    }
+
+        /* Overview Section for Mobile: stack cards vertically */
+        .dar-mode .overview {
+            display: flex;
+            flex-direction: column; /* Stacks the overview cards vertically */
+        }
+    
+        .dark-mode .overview-card {
+            width: 91%; /* Full width of the screen */
+            margin-right: 0;
+            margin-bottom: 10px; /* Add margin at the bottom between cards */
+            border: 1px solid #ccc;
+            /* box-shadow: 0px 4px 8px rgb(255, 255, 255); */
+        }
+    
+        .dark-mode .overview-card p {
+            margin: 5px 0 0 0;
+            font-size: 1.7em;
+            font-weight: bold;
+            color: #f7f7f7;
+        }
+    
+        .dark-mode .overview-card h4 {
+            margin: 0;
+            font-size: 1.2em;
+        }
+}
+
+
+/* Extra small screens (max-width: 480px) */
+@media (max-width: 480px) {
+
+    .dark-mode .overview-card {
+        width: calc(100% - 60px); /* Full width of the screen */
+        /* margin-right: 0;
+        margin-bottom: 10px; 
+        border: 1px solid #ccc;
+        box-shadow: 0px 4px 8px rgb(255, 255, 255); */
+    }
+    /* .sidebar {
+        width: 60px; 
+    }
+
+    .sidebar.collapsed {
+        width: 50px; 
+    } */
+
+    /* .main-content {
+        margin-left: 60px; 
+        width: calc(100% - 60px);
+    } */
+
+    /* .overview {
+        gap: 5px; 
+    }
+
+    .overview-card {
+        padding: 10px; 
+    }
+
+    .carousel-item p {
+        font-size: 10px; 
+    } */
+    .dark-mode .carousel-caption {
+        position: absolute;
+        bottom: 10px; /* Push the caption towards the bottom of the image */
+        left: 20px; /* Adjust to align text with the image */
+        color: #ffffff;
+        font-size: 1.2em;
+        /* background-color: rgba(0, 0, 0, 0.5); Add background for better readability */
+        padding: 5px 10px;
+        border-radius: 5px;
+    }
+}
