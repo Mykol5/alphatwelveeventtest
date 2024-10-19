@@ -16,6 +16,7 @@
     z-index: 1000;
     justify-content: space-between;
     align-items: center;
+    overflow: hidden;
 }
 
 .mobile-navbar .logo h4 {
@@ -82,6 +83,10 @@
 
 /* Media Query for mobile screens */
 @media only screen and (max-width: 768px) {
+
+    .right-filters {
+        overflow: hidden;
+    }
 
     /* Adjust the main content padding for mobile */
     .main-content {
