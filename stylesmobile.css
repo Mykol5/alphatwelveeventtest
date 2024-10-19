@@ -84,9 +84,9 @@
 /* Media Query for mobile screens */
 @media only screen and (max-width: 768px) {
 
-    .right-filters {
+    /* .right-filters {
         overflow: hidden;
-    }
+    } */
 
     /* Adjust the main content padding for mobile */
     .main-content {
@@ -99,6 +99,7 @@
     .main-content p {
         font-size: 21px;
         color: #000;
+        margin-top: 35px;
     }
 
     #eventname {

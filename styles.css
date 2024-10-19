@@ -8,7 +8,6 @@ body {
     margin: 0;
     padding: 0;
     display: flex;
-    overflow: hidden;
 }
 
 /* Sidebar Styles */
@@ -505,6 +504,7 @@ body {
     display: flex;
     align-items: center;
     gap: 10px; /* Spacing between elements in the right section */
+    overflow: hidden;
 }
 
 .results-display {

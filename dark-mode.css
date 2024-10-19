@@ -7,7 +7,6 @@ body.dark-mode {
     margin: 0;
     padding: 0;
     display: flex;
-    overflow: hidden;
 }
 
 /* Sidebar Styles */
@@ -660,6 +659,7 @@ button.dark-mode:hover {
     .dark-mode .main-content p {
         font-size: 21px;
         color: #ffffff;
+        margin-top: 35px;
     }
 
         /* Overview Section for Mobile: stack cards vertically */
