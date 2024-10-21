@@ -379,15 +379,19 @@ body {
 @media (max-width: 480px) {
     .modal-content {
         width: 95%; /* Make modal take most of the screen width */
+        height: 45%;
         padding: 15px; /* Reduce padding for smaller screens */
     }
 
     .modal-content h3 {
-        font-size: 16px; /* Smaller heading on mobile */
+        font-size: 18px; /* Smaller heading on mobile */
+        margin-bottom: -20px;
     }
 
     .modal-content p {
-        font-size: 12px; /* Smaller text on mobile */
+        font-size: 14px; /* Smaller text on mobile */
+        margin-bottom: 15px;
+        margin-top: 35px;
     }
 
     .modal-actions {
@@ -395,9 +399,29 @@ body {
         gap: 5px; /* Reduce gap between buttons */
     }
 
-    .modal-actions button {
-        min-width: 100%; /* Full width buttons */
-        padding: 10px; /* Adjust padding for better touch targets */
-        font-size: 12px; /* Font size adjustment for mobile */
-    }
+    /* Action Buttons */
+.modal-actions {
+    display: flex;
+    justify-content: space-between; /* Space between buttons */
+    align-items: center; /* Center buttons vertically */
+    margin-top: 0px; /* Margin above buttons */
+}
+
+/* Button styles */
+.modal-actions button {
+    padding: 10px; /* Adjust padding for better touch targets */
+    font-size: 12px; /* Font size adjustment for mobile */
+    border-radius: 0px;
+}
+
+/* Specific button widths */
+.edit-btn {
+    min-width: 90%; /* Minimum width for Edit button */
+}
+
+.delete-btn,
+.complete-btn {
+    min-width: 90%; /* Minimum width for Delete and Complete buttons */
+}
+
 }
