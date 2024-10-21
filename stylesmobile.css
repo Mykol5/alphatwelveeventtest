@@ -288,13 +288,13 @@ body {
     }
 
     .filters input[type="text"] {
-        width: 94%; /* Make inputs and selects take full width */
+        width: 95%; /* Make inputs and selects take full width */
         margin-right: 0; /* Remove the right margin for mobile */
         border-radius: 0px;
     }
 
     .filters select {
-        width: 96.4%; /* Make select dropdowns take full width */
+        width: 100%; /* Make select dropdowns take full width */
         margin-right: 0; /* Remove the right margin for mobile */
         border-radius: 0px;
         text-align: center; /* Center the text in the select box */
