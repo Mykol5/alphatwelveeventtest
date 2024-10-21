@@ -328,7 +328,7 @@ body {
         display: flex;
         position: relative;
         margin-left: auto;
-        margin-right: 10px;
+        margin-right: 5px;
         /* padding-right: 50px; */
     }
 
@@ -350,7 +350,7 @@ body {
     #exportBtn {
         margin-left: auto;  /* Align this button to the end */
         /* Optionally, you can set a specific width for mobile */
-        margin-right: 10px;
+        margin-right: 5px;
         text-align: center;
         max-width: 24%;
         border-radius: 0px;
