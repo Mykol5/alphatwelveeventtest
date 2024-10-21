@@ -182,43 +182,43 @@ function updateCarousel() {
     });
 }
 
-// Select the modal and close button
-const modal = document.getElementById('eventModal');
-const closeBtn = document.querySelector('.close-btn');
+// // Select the modal and close button
+// const modal = document.getElementById('eventModal');
+// const closeBtn = document.querySelector('.close-btn');
 
-// Function to open the modal and populate it with event data
-function openModal(eventData) {
-    document.getElementById('modal-event-name').textContent = eventData.name;
-    document.getElementById('modal-event-date').textContent = eventData.date;
-    document.getElementById('modal-event-description').textContent = eventData.description;
+// // Function to open the modal and populate it with event data
+// function openModal(eventData) {
+//     document.getElementById('modal-event-name').textContent = eventData.name;
+//     document.getElementById('modal-event-date').textContent = eventData.date;
+//     document.getElementById('modal-event-description').textContent = eventData.description;
 
-    const speakersContainer = document.getElementById('modal-speakers');
-    speakersContainer.innerHTML = ''; // Clear previous speakers
+//     const speakersContainer = document.getElementById('modal-speakers');
+//     speakersContainer.innerHTML = ''; // Clear previous speakers
 
-    eventData.speakers.forEach(speaker => {
-        const img = document.createElement('img');
-        img.src = speaker.image;
-        img.alt = speaker.name;
-        speakersContainer.appendChild(img);
-    });
+//     eventData.speakers.forEach(speaker => {
+//         const img = document.createElement('img');
+//         img.src = speaker.image;
+//         img.alt = speaker.name;
+//         speakersContainer.appendChild(img);
+//     });
 
-    document.getElementById('modal-attendees').textContent = 
-        `${eventData.speakers.length} Guest Speakers: ${eventData.speakers.map(s => s.name).join(', ')}.\n${eventData.attendees} Attendees`;
+//     document.getElementById('modal-attendees').textContent = 
+//         `${eventData.speakers.length} Guest Speakers: ${eventData.speakers.map(s => s.name).join(', ')}.\n${eventData.attendees} Attendees`;
     
-    modal.style.display = 'flex'; // Show the modal
-}
+//     modal.style.display = 'flex'; // Show the modal
+// }
 
-// Close modal when clicking on close button
-closeBtn.addEventListener('click', () => {
-    modal.style.display = 'none';
-});
+// // Close modal when clicking on close button
+// closeBtn.addEventListener('click', () => {
+//     modal.style.display = 'none';
+// });
 
-// Close modal when clicking outside the modal content
-window.addEventListener('click', (e) => {
-    if (e.target === modal) {
-        modal.style.display = 'none';
-    }
-});
+// // Close modal when clicking outside the modal content
+// window.addEventListener('click', (e) => {
+//     if (e.target === modal) {
+//         modal.style.display = 'none';
+//     }
+// });
 
 // Example event data to test with
 const eventData = {
@@ -262,6 +262,89 @@ menuToggle.addEventListener('click', () => {
     }
 });
 
+
+// // JavaScript to handle expand/collapse of the rows
+// document.querySelectorAll('.expand-btn').forEach((btn) => {
+//     btn.addEventListener('click', function () {
+//         // Find the next sibling row (expandable-content) and toggle its visibility
+//         const expandableRow = this.closest('tr').nextElementSibling;
+//         expandableRow.style.display = expandableRow.style.display === 'table-row' ? 'none' : 'table-row';
+
+//         // Toggle the arrow rotation to show it is expanded
+//         this.closest('tr').classList.toggle('expanded');
+//     });
+// });
+
+
+// Select the modal and close button
+const modal = document.getElementById('eventModal');
+const closeBtn = document.querySelector('.close-btn');
+
+// Function to open the modal and populate it with event data
+function openModal(eventData) {
+    document.getElementById('modal-event-name').textContent = eventData.name;
+    document.getElementById('modal-event-date').textContent = eventData.date;
+    document.getElementById('modal-event-description').textContent = eventData.description;
+
+    const speakersContainer = document.getElementById('modal-speakers');
+    speakersContainer.innerHTML = ''; // Clear previous speakers
+
+    eventData.speakers.forEach(speaker => {
+        const img = document.createElement('img');
+        img.src = speaker.image;
+        img.alt = speaker.name;
+        speakersContainer.appendChild(img);
+    });
+
+    document.getElementById('modal-attendees').textContent = 
+        `${eventData.speakers.length} Guest Speakers: ${eventData.speakers.map(s => s.name).join(', ')}.\n${eventData.attendees} Attendees`;    
+  
+    modal.style.display = 'flex'; // Show the modal
+}
+
+// Close modal when clicking on close button
+closeBtn.addEventListener('click', () => {
+    modal.style.display = 'none';
+});
+
+// Close modal when clicking outside the modal content
+window.addEventListener('click', (e) => {
+    if (e.target === modal) {
+        modal.style.display = 'none';
+    }
+});
+
+// JavaScript to handle expand/collapse of the rows
+document.querySelectorAll('.expand-btn').forEach((btn) => {
+    btn.addEventListener('click', function (event) {
+        // Prevent the click event from propagating to parent elements
+        event.stopPropagation();
+
+        // Find the next sibling row (expandable-content) and toggle its visibility
+        const expandableRow = this.closest('tr').nextElementSibling;
+        expandableRow.style.display = expandableRow.style.display === 'table-row' ? 'none' : 'table-row';
+
+        // Toggle the arrow rotation to show it is expanded (optional)
+        this.closest('tr').classList.toggle('expanded');
+    });
+});
+
+// Assuming you have rows set up to open the modal when clicked
+document.querySelectorAll('.event-row').forEach((row) => {
+    row.addEventListener('click', function () {
+        // Prevent the modal from opening if the expand button is clicked
+        if (event.target.classList.contains('expand-btn')) return;
+
+        const eventData = {
+            name: this.cells[1].textContent, // Get Event Name from the second cell
+            date: this.cells[2].textContent, // Get Event Date from the third cell
+            description: "Event description here...", // Replace with actual description if available
+            speakers: [{ name: this.cells[3].textContent, image: "/img/Container (1).png" }], // Adjust as needed
+            attendees: "300" // Replace with actual attendee count
+        };
+        openModal(eventData);
+    });
+});
 
 
 

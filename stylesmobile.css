@@ -417,11 +417,142 @@ body {
 /* Specific button widths */
 .edit-btn {
     min-width: 90%; /* Minimum width for Edit button */
+    margin-left: 30px;
 }
 
-.delete-btn,
+.delete-btn {
+    min-width: 90%; /* Minimum width for Delete and Complete buttons */
+    margin-right: 0px;
+}
+
 .complete-btn {
     min-width: 90%; /* Minimum width for Delete and Complete buttons */
+    margin-left: 5px;
 }
+
+}
+
+
+
+
+/* Mobile-specific styling (collapsible view) */
+@media (max-width: 768px) {
+
+    /* Hide Date and Speaker columns */
+    thead th:nth-child(3), /* Date header */
+    thead th:nth-child(4), /* Speaker header */
+    tbody td:nth-child(3), /* Date column data */
+    tbody td:nth-child(4)  /* Speaker column data */
+    {
+        display: none;
+    }
+
+    /* Ensure "Event" and "Status" fill the table head */
+    /* .event-table th:nth-child(2),
+    .event-table th:nth-child(5)  {
+        text-align: left;
+        width: 100%; 
+    } */
+
+    .event-table thead th {
+        text-align: left;
+        display: none; /* Stack the headers */
+        width: 100%; /* Make it span across the screen */
+    }
+
+    .event-table #mobiletab th {
+        width: 100%;
+        display: block;
+        position: relative;
+        text-align: left;
+        border-collapse: collapse; /* Remove double borders */
+    }
+    
+
+    /* Adjust table layout for mobile view */
+    .event-table {
+        width: 105%;
+    }
+
+    /* Flexbox for the event row, showing Event and Status */
+    .event-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    /* Flexbox for the event name and arrow button */
+    .event-row td {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px;
+    }
+
+    /* Arrow button close to the event name */
+    .expand-btn {
+        background: none;
+        border: none;
+        cursor: pointer;
+        font-size: 16px;
+        margin-right: 10px; /* Space between arrow and text */
+    }
+
+    /* Rotate arrow when expanded */
+    .expanded .expand-btn {
+        transform: rotate(90deg);
+    }
+
+    /* Status badge */
+    .status {
+        padding: 5px 10px;
+        border-radius: 50px;
+        color: #fff;
+        font-size: 10px;
+    }
+
+    .status.completed {
+        background-color: rgb(31, 187, 83);
+        color: white;
+    }
+
+    .status.in-progress {
+        background-color: rgb(34, 81, 209);
+        color: white;
+    }
+
+    /* Hide expandable content by default */
+    .expandable-content {
+        display: none;
+        background-color: #f9f9f9;
+        padding: 10px;
+    }
+
+    #excont {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    #evdate {
+        justify-content: flex-start;
+    }
+
+    #evspeaker {
+        justify-content: flex-end;
+    }
+
+    .mobiletab {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .word1 {
+        justify-content: flex-start;
+    }
+    .word2{
+        justify-content: flex-end;
+        margin-right: 40px;
+    }
+
 
 }

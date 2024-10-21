@@ -420,6 +420,35 @@ body {
     color: #3498db;
 }
 
+
+
+/* Hide expand button on larger screens */
+@media (min-width: 769px) {
+    #mobiletab {
+        display: none;
+    }
+
+    .expand-btn {
+        display: none;
+    }
+    
+    .expandable-content {
+        display: none;
+    }
+    
+    #arrowspace {
+        display: none;
+    }
+    
+    #arrow{
+        display: none;
+    }
+}
+
+
+
+
+
 /* Pagination */
 .eventbottom {
     display: flex;

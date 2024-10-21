@@ -217,79 +217,181 @@
     </div>
 
     <div class="table-container">
+
         <table class="event-table">
             <thead>
                 <tr>
+                    <th id="arrowspace" style="width: 5px;"></th>  <!-- Empty space for the arrow -->
                     <th>Event Name</th>
                     <th>Date</th>
                     <th>Speaker</th>
                     <th>Status</th>
                 </tr>
+                <tr id="mobiletab">
+                    <th>
+                        <div class="mobiletab">
+
+                            <span class="word1">Event Name</span>
+                            <span class="word2">Status</span>
+
+                        </div>
+                    </th>
+                    
+                </tr>
             </thead>
             <tbody>
-                <tr class="event-row" data-event-name="Blockchain Revolution Conference" data-event-date="2024-10-05" data-event-speaker="Dr. Peter Smith" data-event-status="Upcoming">
+                <tr class="event-row">
+                    <td id="arrow" style="width: 5px; text-align: center;"><button class="expand-btn">></button></td>
                     <td>Cloud Innovation Summit</td>
-                    <td>2024-10-15</td>
-                    <td>Jane Doe</td>
+                    <td id="date">2024-10-15</td>
+                    <td id="name">Jane Doe</td>
                     <td><span class="status completed">Completed</span></td>
                 </tr>
-                <tr class="event-row" data-event-name="Blockchain Revolution Conference" data-event-date="2024-10-05" data-event-speaker="Dr. Peter Smith" data-event-status="Upcoming">
+                <tr class="expandable-content">
+                    <td colspan="5" id="excont">
+                        <div id="evdate"><strong></strong> 2024-10-15</div>
+                        <div id="evspeaker"><strong></strong> Jane Doe</div>
+                    </td>
+                </tr>
+        
+                <tr class="event-row">
+                    <td id="arrow" style="width: 5px; text-align: center;"><button class="expand-btn">></button></td>
                     <td>Blockchain Revolution Conference</td>
-                    <td>2024-11-05</td>
-                    <td>Dr. Peter Smith</td>
+                    <td id="date">2024-11-05</td>
+                    <td id="name">Dr. Peter Smith</td>
                     <td><span class="status in-progress">In Progress</span></td>
                 </tr>
-                <tr class="event-row" data-event-name="Blockchain Revolution Conference" data-event-date="2024-10-05" data-event-speaker="Dr. Peter Smith" data-event-status="Upcoming">
+                <tr class="expandable-content">
+                    <td colspan="5" id="excont">
+
+                        <div id="evdate"><strong></strong> 2024-11-05</div>
+                        <div id="evspeaker"><strong></strong> Dr. Peter Smith</div>
+                    </td>
+                </tr>
+        
+                <tr class="event-row">
+                    <td id="arrow" style="width: 5px; text-align: center;"><button class="expand-btn">></button></td>
                     <td>AI in Healthcare Symposium</td>
-                    <td>2024-12-01</td>
-                    <td>Dr. Aisha Malik</td>
+                    <td id="date">2024-12-01</td>
+                    <td id="name">Dr. Aisha Malik</td>
                     <td><span class="status completed">Completed</span></td>
                 </tr>
-                <tr>
+                <tr class="expandable-content">
+                    <td colspan="5" id="excont">
+
+                        <div id="evdate"><strong></strong>2024-12-01</div>
+                        <div id="evspeaker"><strong></strong>Dr. Aisha Malik</div>
+                    </td>
+                </tr>
+        
+                <tr class="event-row">
+                    <td id="arrow" style="width: 5px; text-align: center;"><button class="expand-btn">></button></td>
                     <td>Future of Fintech Forum</td>
-                    <td>2024-10-25</td>
-                    <td>John Lee</td>
+                    <td id="date">2024-10-25</td>
+                    <td id="name">John Lee</td>
                     <td><span class="status completed">Completed</span></td>
                 </tr>
-                <tr>
+                <tr class="expandable-content">
+                    <td colspan="5" id="excont">
+
+                        <div id="evdate"><strong></strong>2024-10-25</div>
+                        <div id="evspeaker"><strong></strong>John Lee</div>
+                    </td>
+                </tr>
+        
+                <tr class="event-row">
+                    <td id="arrow" style="width: 5px; text-align: center;"><button class="expand-btn">></button></td>
                     <td>Data Analytics in Business</td>
-                    <td>2024-11-12</td>
-                    <td>Rachel Moore</td>
+                    <td id="date">2024-11-12</td>
+                    <td id="name">Rachel Moore</td>
                     <td><span class="status completed">Completed</span></td>
                 </tr>
-                <tr>
+                <tr class="expandable-content">
+                    <td colspan="5" id="excont">
+
+                        <div id="evdate"><strong></strong>2024-11-12</div>
+                        <div id="evspeaker"><strong></strong>Rachel Moore</div>
+                    </td>
+                </tr>
+        
+                <tr class="event-row">
+                    <td id="arrow" style="width: 5px; text-align: center;"><button class="expand-btn">></button></td>
                     <td>Sustainable Energy Expo</td>
-                    <td>2024-09-28</td>
-                    <td>Prof. Alan Green</td>
+                    <td id="date">2024-09-28</td>
+                    <td id="name">Prof. Alan Green</td>
                     <td><span class="status completed">Completed</span></td>
                 </tr>
-                <tr>
+                <tr class="expandable-content">
+                    <td colspan="5" id="excont">
+
+                        <div id="evdate"><strong></strong>2024-09-28</div>
+                        <div id="evspeaker"><strong></strong>Prof. Alan Green</div>
+                    </td>
+                </tr>
+        
+                <tr class="event-row">
+                    <td id="arrow" style="width: 5px; text-align: center;"><button class="expand-btn">></button></td>
                     <td>Web3 Interfaces Workshop</td>
-                    <td>2024-10-10</td>
-                    <td>Kevin Adams</td>
+                    <td id="date">2024-10-10</td>
+                    <td id="name">Kevin Adams</td>
                     <td><span class="status in-progress">In Progress</span></td>
                 </tr>
-                <tr>
+                <tr class="expandable-content">
+                    <td colspan="5" id="excont">
+
+                        <div id="evdate"><strong></strong>2024-10-10</div>
+                        <div id="evspeaker"><strong></strong>Kevin Adams</div>
+                    </td>
+                </tr>
+        
+                <tr class="event-row">
+                    <td id="arrow" style="width: 5px; text-align: center;"><button class="expand-btn">></button></td>
                     <td>Cybersecurity for Startups</td>
-                    <td>2024-11-19</td>
-                    <td>Emily Zhang</td>
+                    <td id="date">2024-11-19</td>
+                    <td id="name">Emily Zhang</td>
                     <td><span class="status completed">Completed</span></td>
                 </tr>
-                <tr>
+                <tr class="expandable-content">
+                    <td colspan="5" id="excont">
+
+                        <div id="evdate"><strong></strong>2024-11-19</div>
+                        <div id="evspeaker"><strong></strong>Emily Zhang</div>
+                    </td>
+                </tr>
+        
+                <tr class="event-row">
+                    <td id="arrow" style="width: 5px; text-align: center;"><button class="expand-btn">></button></td>
                     <td>Smart Cities Forum</td>
-                    <td>2024-10-18</td>
-                    <td>Dr. Maria Hernandez</td>
+                    <td id="date">2024-10-18</td>
+                    <td id="name">Dr. Maria Hernandez</td>
                     <td><span class="status in-progress">In Progress</span></td>
                 </tr>
-                <tr>
+                <tr class="expandable-content">
+                    <td colspan="5" id="excont">
+
+                        <div id="evdate"><strong></strong>2024-10-18</div>
+                        <div id="evspeaker"><strong></strong>Dr. Maria Hernandez</div>
+                    </td>
+                </tr>
+        
+                <tr class="event-row">
+                    <td id="arrow" style="width: 5px; text-align: center;"><button class="expand-btn">></button></td>
                     <td>Tech Safari Mixer</td>
-                    <td>2024-09-30</td>
-                    <td>Guest Panel</td>
+                    <td id="date">2024-09-30</td>
+                    <td id="name">Guest Panel</td>
                     <td><span class="status in-progress">In Progress</span></td>
+                </tr>
+                <tr class="expandable-content">
+                    <td colspan="5" id="excont">
+
+                        <div id="evdate"><strong></strong>2024-09-30</div>
+                        <div id="evspeaker"><strong></strong>Guest Panel</div>
+                    </td>
                 </tr>
             </tbody>
         </table>
-    
+        
+        
         <div class="eventbottom">
             <div class="pagination">
                 <button class="page-btn">&lt;</button>
@@ -452,3 +554,99 @@
     </script> -->
 </body>
 </html>
+
+
+
+
+
+
+                <!-- <table class="event-table">
+                    <thead>
+                        <tr>
+                            <th id="arrowspace"></th>  
+                            <th>Event Name</th>
+                            <th>Date</th>
+                            <th>Speaker</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="event-row">
+                            <td id="arrow" style="width: 5px; text-align: center;"><button class="expand-btn">></button></td>
+                            <td>Cloud Innovation Summit</td>
+                            <td id="date">2024-10-15</td>
+                            <td id="name">Jane Doe</td>
+                            <td><span class="status completed">Completed</span></td>
+                        </tr>
+                        <tr class="expandable-content">
+                            <td colspan="5" id="excont">
+
+                                <div><strong></strong> 2024-10-15</div>
+                                <div><strong></strong> Jane Doe</div>
+                            </td>
+                        </tr>
+                        
+                        <tr class="event-row">
+                            <td id="arrow" style="width: 5px; text-align: center;">><button class="expand-btn"></button></td>
+                            <td>Blockchain Revolution Conference</td>
+                            <td id="date">2024-11-05</td>
+                            <td id="name">Dr. Peter Smith</td>
+                            <td><span class="status in-progress">In Progress</span></td>
+                        </tr>
+                        <tr class="expandable-content">
+                            <td colspan="5" id="excont">
+
+                                <div><strong></strong> 2024-11-05</div>
+                                <div><strong></strong> Dr. Peter Smith</div>
+                            </td>
+                        </tr>
+                        <tr class="event-row" data-event-name="Blockchain Revolution Conference" data-event-date="2024-10-05" data-event-speaker="Dr. Peter Smith" data-event-status="Upcoming">
+                            <td>AI in Healthcare Symposium</td>
+                            <td>2024-12-01</td>
+                            <td>Dr. Aisha Malik</td>
+                            <td><span class="status completed">Completed</span></td>
+                        </tr>
+                        <tr>
+                            <td>Future of Fintech Forum</td>
+                            <td>2024-10-25</td>
+                            <td>John Lee</td>
+                            <td><span class="status completed">Completed</span></td>
+                        </tr>
+                        <tr>
+                            <td>Data Analytics in Business</td>
+                            <td>2024-11-12</td>
+                            <td>Rachel Moore</td>
+                            <td><span class="status completed">Completed</span></td>
+                        </tr>
+                        <tr>
+                            <td>Sustainable Energy Expo</td>
+                            <td>2024-09-28</td>
+                            <td>Prof. Alan Green</td>
+                            <td><span class="status completed">Completed</span></td>
+                        </tr>
+                        <tr>
+                            <td>Web3 Interfaces Workshop</td>
+                            <td>2024-10-10</td>
+                            <td>Kevin Adams</td>
+                            <td><span class="status in-progress">In Progress</span></td>
+                        </tr>
+                        <tr>
+                            <td>Cybersecurity for Startups</td>
+                            <td>2024-11-19</td>
+                            <td>Emily Zhang</td>
+                            <td><span class="status completed">Completed</span></td>
+                        </tr>
+                        <tr>
+                            <td>Smart Cities Forum</td>
+                            <td>2024-10-18</td>
+                            <td>Dr. Maria Hernandez</td>
+                            <td><span class="status in-progress">In Progress</span></td>
+                        </tr>
+                        <tr>
+                            <td>Tech Safari Mixer</td>
+                            <td>2024-09-30</td>
+                            <td>Guest Panel</td>
+                            <td><span class="status in-progress">In Progress</span></td>
+                        </tr>
+                    </tbody>
+                </table> -->
