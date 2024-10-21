@@ -6,7 +6,9 @@ body.dark-mode {
     font-family: Inter, sans-serif;
     margin: 0;
     padding: 0;
+    max-width: 100vw;
     display: flex;
+    overflow-x: hidden;
 }
 
 /* Sidebar Styles */
@@ -393,6 +395,32 @@ body.dark-mode {
     background-color: #8576FF; /* Lighter hover button */
 }
 
+
+/* Hide expand button on larger screens */
+@media (min-width: 769px) {
+    #mobiletab {
+        display: none;
+    }
+
+    .expand-btn {
+        display: none;
+    }
+    
+    .expandable-content {
+        display: none;
+    }
+    
+    #arrowspace {
+        display: none;
+    }
+    
+    #arrow{
+        display: none;
+    }
+}
+
+
+
 /* Rows per Page Dropdown for Dark Mode */
 .dark-mode .rows-per-page {
     display: flex;
@@ -741,31 +769,32 @@ button.dark-mode:hover {
 }
 
 
+/* Responsive styles */
 @media (max-width: 480px) {
-    .modal-content {
+    .dark-mode .modal-content {
         width: 95%; /* Make modal take most of the screen width */
         height: 45%;
         padding: 15px; /* Reduce padding for smaller screens */
     }
 
-    .modal-content h3 {
+    .dark-mode .modal-content h3 {
         font-size: 18px; /* Smaller heading on mobile */
         margin-bottom: -20px;
     }
 
-    .modal-content p {
+    .dark-mode .modal-content p {
         font-size: 14px; /* Smaller text on mobile */
         margin-bottom: 15px;
         margin-top: 35px;
     }
 
-    .modal-actions {
+    .dark-mode .modal-actions {
         flex-direction: column; /* Stack buttons vertically */
         gap: 5px; /* Reduce gap between buttons */
     }
 
     /* Action Buttons */
-.modal-actions {
+.dark-mode.modal-actions {
     display: flex;
     justify-content: space-between; /* Space between buttons */
     align-items: center; /* Center buttons vertically */
@@ -773,20 +802,149 @@ button.dark-mode:hover {
 }
 
 /* Button styles */
-.modal-actions button {
+.dark-mode.modal-actions button {
     padding: 10px; /* Adjust padding for better touch targets */
     font-size: 12px; /* Font size adjustment for mobile */
     border-radius: 0px;
 }
 
 /* Specific button widths */
-.edit-btn {
+.dark-mode.edit-btn {
     min-width: 90%; /* Minimum width for Edit button */
+    margin-left: 30px;
 }
 
-.delete-btn,
-.complete-btn {
+.dark-mode.delete-btn {
     min-width: 90%; /* Minimum width for Delete and Complete buttons */
+    margin-right: 0px;
 }
+
+.dark-mode.complete-btn {
+    min-width: 90%; /* Minimum width for Delete and Complete buttons */
+    margin-left: 5px;
+}
+
+}
+
+
+/* Mobile-specific styling (collapsible view) */
+@media (max-width: 768px) {
+
+    /* Hide Date and Speaker columns */
+    .dark-mode th:nth-child(3), /* Date header */
+    .dark-mode th:nth-child(4), /* Speaker header */
+    .dark-mode td:nth-child(3), /* Date column data */
+    .dark-mode td:nth-child(4)  /* Speaker column data */
+    {
+        display: none;
+    }
+
+    /* Ensure "Event" and "Status" fill the table head */
+    /* .event-table th:nth-child(2),
+    .event-table th:nth-child(5)  {
+        text-align: left;
+        width: 100%; 
+    } */
+
+    .dark-mode .event-table thead th {
+        text-align: left;
+        display: none; /* Stack the headers */
+        width: 100%; /* Make it span across the screen */
+    }
+
+    .dark-mode .event-table #mobiletab th {
+        width: 100%;
+        display: block;
+        position: relative;
+        text-align: left;
+        border-collapse: collapse; /* Remove double borders */
+    }
+    
+
+    /* Adjust table layout for mobile view */
+    .dark-mode .event-table {
+        width: 105%;
+    }
+
+    /* Flexbox for the event row, showing Event and Status */
+    .dark-mode .event-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    /* Flexbox for the event name and arrow button */
+    .dark-mode .event-row td {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px;
+    }
+
+    /* Arrow button close to the event name */
+    .dark-mode .expand-btn {
+        background: none;
+        border: none;
+        cursor: pointer;
+        font-size: 16px;
+        margin-right: 10px; /* Space between arrow and text */
+    }
+
+    /* Rotate arrow when expanded */
+    .dark-mode.expanded .expand-btn {
+        transform: rotate(90deg);
+    }
+
+    /* Status badge */
+    .dark-mode.status {
+        padding: 5px 10px;
+        border-radius: 50px;
+        color: #fff;
+        font-size: 10px;
+    }
+
+    .dark-mode .status.completed {
+        background-color: rgb(31, 187, 83);
+        color: white;
+    }
+
+    .dark-mode .status.in-progress {
+        background-color: rgb(34, 81, 209);
+        color: white;
+    }
+
+    /* Hide expandable content by default */
+    .dark-mode .expandable-content {
+        display: none;
+        background-color: #f9f9f9;
+        padding: 10px;
+    }
+
+    .dark-mode #excont {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .dark-mode #evdate {
+        justify-content: flex-start;
+    }
+
+    .dark-mode #evspeaker {
+        justify-content: flex-end;
+    }
+
+    .dark-mode .mobiletab {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .dark-mode .word1 {
+        justify-content: flex-start;
+    }
+    .dark-mode .word2{
+        justify-content: flex-end;
+        margin-right: 40px;
+    }
+
 
 }
