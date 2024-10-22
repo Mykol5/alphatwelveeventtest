@@ -960,7 +960,7 @@ button.dark-mode:hover {
     }
 
     .dark-mode .table-container {
-        width: 390px;
+        width: 370px;
         margin-bottom: 100px;
     }
 
@@ -1055,4 +1055,102 @@ button.dark-mode:hover {
 
 .dark-mode .icon5a, .icon6a, .icon7a {
     margin-right: 10px;
+}
+
+
+/* Mobile styling for .filters section */
+@media (max-width: 768px) {
+    .dark-mode .filters {
+        flex-direction: column; /* Arrange filters in a vertical column */
+        align-items: stretch; /* Make them take full width */
+        gap: 15px; /* Add spacing between each filter */
+        margin-right: 0; /* Remove the extra right margin for mobile */
+        justify-content: center;
+    }
+
+    .dark-mode .filters input[type="text"] {
+        width: 95%; /* Make inputs and selects take full width */
+        margin-right: 0; /* Remove the right margin for mobile */
+        border-radius: 0px;
+    }
+
+    .dark-mode .filters select {
+        width: 100%; /* Make select dropdowns take full width */
+        margin-right: 0; /* Remove the right margin for mobile */
+        border-radius: 0px;
+        text-align: center; /* Center the text in the select box */
+        text-align-last: center; /* Ensure the selected option text is centered */
+        appearance: auto; /* Keep the default appearance, including the arrow */
+        padding-right: 0; /* Prevent padding on the right to avoid arrow misalignment */
+    }
+
+    /* Optional: Adjust padding inside select for better alignment */
+    .dark-mode .filters select option {
+        text-align: center; /* Ensure option text inside the dropdown is centered */
+    }
+
+
+    .dark-mode .right-filters {
+        display: flex;
+        flex-direction: column; /* Stack the elements vertically */
+        align-items: stretch;
+        gap: 15px; /* Space between the sections vertically */
+    }
+
+    /* Align the "Sort" text and the dropdown horizontally */
+    .dark-mode .right-filters .sort-container {
+        display: flex;
+        align-items: center;  /* Aligns them vertically in the middle */
+        justify-content: flex-start;  /* Space between the buttons */
+        gap: 10px;  /* Adds space between "Sort" label and dropdown */
+    }
+    .dark-mode .right-filters #sortFilter {
+        width: 120px;
+        display: flex;
+        position: relative;
+        margin-left: auto;
+        margin-right: 5px;
+        /* padding-right: 50px; */
+    }
+
+    /* Align the buttons horizontally with space between them */
+    .dark-mode .right-filters .button-container {
+        display: flex;
+        justify-content: flex-start;  /* Space between the buttons */
+        align-items: center;  /* Vertically center the buttons */
+    }
+
+    .dark-mode #optionsBtn {
+        width: 10px;
+        margin-right: auto;
+        max-width: 7%;
+        text-align: center;
+        border-radius: 0px;
+    }
+
+    .dark-mode #exportBtn {
+        margin-left: auto;  /* Align this button to the end */
+        /* Optionally, you can set a specific width for mobile */
+        margin-right: 5px;
+        text-align: center;
+        max-width: 24%;
+        border-radius: 0px;
+    }
+    
+    /* Make the buttons full-width on mobile */
+    .dark-mode .right-filters button {
+        flex: 1;  /* Allow the buttons to stretch evenly */
+        /* max-width: 48%;  Make sure buttons don't take more than 50% of the space */
+    }
+
+    .dark-mode .results-display {
+        font-size: 14px;
+        margin-right: 0;
+        margin-bottom: 10px; /* Add margin to space out from other elements */
+    }
+
+    .dark-mode button {
+        width: 100%; /* Make buttons take full width on mobile */
+        text-align: left; /* Align text inside buttons to the left */
+    }
 }
