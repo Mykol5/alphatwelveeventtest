@@ -427,3 +427,99 @@ navLinks.forEach(link => {
         this.classList.add('active');
     });
 });
+
+
+    // document.addEventListener("DOMContentLoaded", () => {
+    //     // Get all filter elements
+    //     const searchField = document.getElementById("searchField");
+    //     const dateFilter = document.getElementById("dateFilter");
+    //     const statusFilter = document.getElementById("statusFilter");
+    //     const nameFilter = document.getElementById("nameFilter");
+
+    //     // Get all the event rows
+    //     const eventRows = document.querySelectorAll(".event-row");
+
+    //     // Listen for changes in the filters
+    //     searchField.addEventListener("input", filterTable);
+    //     dateFilter.addEventListener("change", filterTable);
+    //     statusFilter.addEventListener("change", filterTable);
+    //     nameFilter.addEventListener("change", filterTable);
+
+    //     // Filter table function
+    //     function filterTable() {
+    //         const searchTerm = searchField.value.toLowerCase();
+    //         const selectedDate = dateFilter.value;
+    //         const selectedStatus = statusFilter.value;
+    //         const selectedName = nameFilter.value;
+
+    //         eventRows.forEach(row => {
+    //             const eventName = row.querySelector("td:nth-child(2)").textContent.toLowerCase();
+    //             const eventDate = row.querySelector("td:nth-child(3)").textContent;
+    //             const eventNameCell = row.querySelector("td:nth-child(4)").textContent;
+    //             const eventStatus = row.querySelector("td:nth-child(5)").textContent.toLowerCase();
+
+    //             // Apply all filters
+    //             const matchesSearch = eventName.includes(searchTerm);
+    //             const matchesDate = !selectedDate || eventDate === selectedDate;
+    //             const matchesStatus = !selectedStatus || eventStatus.includes(selectedStatus.toLowerCase());
+    //             const matchesName = !selectedName || eventNameCell.includes(selectedName);
+
+    //             // If row matches all filters, show it; otherwise, hide it
+    //             if (matchesSearch && matchesDate && matchesStatus && matchesName) {
+    //                 row.style.display = "";
+    //             } else {
+    //                 row.style.display = "none";
+    //             }
+    //         });
+    //     }
+    // });
+
+
+
+    document.addEventListener("DOMContentLoaded", () => {
+        // Get all filter elements
+        const searchField = document.getElementById("searchField");
+        const dateFilter = document.getElementById("dateFilter");
+        const statusFilter = document.getElementById("statusFilter");
+        const nameFilter = document.getElementById("nameFilter");
+
+        // Get all the event rows
+        const eventRows = document.querySelectorAll(".event-row");
+
+        // Listen for changes in the filters
+        searchField.addEventListener("input", filterTable);
+        dateFilter.addEventListener("change", filterTable);
+        statusFilter.addEventListener("change", filterTable);
+        nameFilter.addEventListener("change", filterTable);
+
+        // Filter table function
+        function filterTable() {
+            const searchTerm = searchField.value.toLowerCase();
+            const selectedDate = dateFilter.value;
+            const selectedStatus = statusFilter.value; // Don't lowercase it
+            const selectedName = nameFilter.value.toLowerCase();
+
+            eventRows.forEach(row => {
+                const eventName = row.querySelector("td:nth-child(2)").textContent.toLowerCase();
+                const eventDate = row.querySelector("td:nth-child(3)").textContent;
+                const eventSpeaker = row.querySelector("td:nth-child(4)").textContent.toLowerCase();
+                const eventStatus = row.querySelector("td:nth-child(5)").textContent.trim(); // Trim any whitespace
+
+                // Apply all filters
+                const matchesSearch = !searchTerm || eventName.includes(searchTerm);
+                const matchesDate = !selectedDate || eventDate === selectedDate;
+                const matchesStatus = !selectedStatus || eventStatus === selectedStatus;
+                const matchesName = !selectedName || eventSpeaker.includes(selectedName);
+
+                // If row matches all filters, show it; otherwise, hide it
+                if (matchesSearch && matchesDate && matchesStatus && matchesName) {
+                    row.style.display = "";
+                } else {
+                    row.style.display = "none";
+                }
+            });
+        }
+    });
+
+
+    
