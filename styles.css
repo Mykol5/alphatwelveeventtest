@@ -80,8 +80,8 @@ body {
 
 .profile-icon img {
     border-radius: 50%; /* Ensure the image is circular */
-    width: 50px; /* Set a fixed width */
-    height: 50px; /* Set a fixed height */
+    width: 40px; /* Set a fixed width */
+    height: 40px; /* Set a fixed height */
     margin-right: 10px; /* Space between icon and details */
 }
 
@@ -730,8 +730,8 @@ button:hover {
     }
 
     .slider {
-        width: 34px;
-        height: 20px;
+        width: 30px;
+        height: 15px;
         background-color: #ccc;
         border-radius: 34px;
         position: relative;
