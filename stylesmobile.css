@@ -234,13 +234,13 @@ body {
 /* Extra small screens (max-width: 480px) */
 @media (max-width: 480px) {
 
-    .overview-card {
-        width: calc(100% - 60px); /* Full width of the screen */
-        /* margin-right: 0;
+    /* .overview-card {
+         
+        margin-right: 0;
         margin-bottom: 10px; 
         border: 1px solid #ccc;
-        box-shadow: 0px 4px 8px rgb(255, 255, 255); */
-    }
+        box-shadow: 0px 4px 8px rgb(255, 255, 255);
+    } */
     /* .sidebar {
         width: 60px; 
     }

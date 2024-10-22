@@ -733,13 +733,13 @@ button.dark-mode:hover {
 /* Extra small screens (max-width: 480px) */
 @media (max-width: 480px) {
 
-    .dark-mode .overview-card {
-        width: calc(100% - 60px); /* Full width of the screen */
-        /* margin-right: 0;
+    /* .dark-mode .overview-card {
+        width: calc(100% - 60px); 
+        margin-right: 0;
         margin-bottom: 10px; 
         border: 1px solid #ccc;
-        box-shadow: 0px 4px 8px rgb(255, 255, 255); */
-    }
+        box-shadow: 0px 4px 8px rgb(255, 255, 255);
+    } */
     /* .sidebar {
         width: 60px; 
     }
@@ -1069,7 +1069,7 @@ button.dark-mode:hover {
     }
 
     .dark-mode .filters input[type="text"] {
-        width: 100%; /* Make inputs and selects take full width */
+        width: 110%; /* Make inputs and selects take full width */
         margin-right: 0; /* Remove the right margin for mobile */
         border-radius: 0px;
     }
