@@ -1069,13 +1069,13 @@ button.dark-mode:hover {
     }
 
     .dark-mode .filters input[type="text"] {
-        width: 95%; /* Make inputs and selects take full width */
+        width: 100%; /* Make inputs and selects take full width */
         margin-right: 0; /* Remove the right margin for mobile */
         border-radius: 0px;
     }
 
     .dark-mode .filters select {
-        width: 100%; /* Make select dropdowns take full width */
+        width: 110%; /* Make select dropdowns take full width */
         margin-right: 0; /* Remove the right margin for mobile */
         border-radius: 0px;
         text-align: center; /* Center the text in the select box */
@@ -1102,7 +1102,7 @@ button.dark-mode:hover {
         display: flex;
         align-items: center;  /* Aligns them vertically in the middle */
         justify-content: flex-start;  /* Space between the buttons */
-        gap: 10px;  /* Adds space between "Sort" label and dropdown */
+        gap: 220px;  /* Adds space between "Sort" label and dropdown */
     }
     .dark-mode .right-filters #sortFilter {
         width: 120px;
