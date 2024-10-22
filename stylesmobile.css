@@ -152,9 +152,16 @@ body {
     }
 
     /* Chart and Carousel containers for mobile view */
-    .chart-container, .carousel {
-        width: 91%; /* Full width for both chart and carousel */
-        height: 100%;
+    .chart-container {
+        width: 88%; /* Full width for both chart and carousel */
+        height: 150%;
+        margin-bottom: 20px; /* Space between them */
+        overflow-x: hidden;
+    }
+
+    .carousel {
+        width: 100%; /* Full width for both chart and carousel */
+        height: 150%;
         margin-bottom: 20px; /* Space between them */
         overflow-x: hidden;
     }

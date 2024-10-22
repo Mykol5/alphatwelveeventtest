@@ -1069,7 +1069,7 @@ button.dark-mode:hover {
     }
 
     .dark-mode .filters input[type="text"] {
-        width: 110%; /* Make inputs and selects take full width */
+        width: 105%; /* Make inputs and selects take full width */
         margin-right: 0; /* Remove the right margin for mobile */
         border-radius: 0px;
     }
@@ -1109,7 +1109,7 @@ button.dark-mode:hover {
         display: flex;
         position: relative;
         margin-left: auto;
-        margin-right: 5px;
+        margin-right: 0px;
         /* padding-right: 50px; */
     }
 
@@ -1131,7 +1131,7 @@ button.dark-mode:hover {
     .dark-mode #exportBtn {
         margin-left: auto;  /* Align this button to the end */
         /* Optionally, you can set a specific width for mobile */
-        margin-right: 5px;
+        margin-right: 0px;
         text-align: center;
         max-width: 24%;
         border-radius: 0px;
