@@ -705,7 +705,7 @@ button.dark-mode:hover {
         }
     
         .dark-mode .overview-card {
-            width: 97%; /* Full width of the screen */
+            width: 100%; /* Full width of the screen */
             margin-right: 0;
             margin-bottom: 10px; /* Add margin at the bottom between cards */
             border: 1px solid #ccc;
