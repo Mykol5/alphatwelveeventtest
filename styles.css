@@ -237,6 +237,7 @@ body {
     align-items: flex-start; /* Aligns both items at the top */
     margin-bottom: 0px;
     gap: 0px; /* Adds space between the chart and carousel */
+    width: 100%;
 }
 
 
@@ -249,7 +250,7 @@ body {
     margin-right: 0px;
     width: 49%;
     height: auto;
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
 }
 
 /* Carousel */
@@ -259,7 +260,7 @@ body {
     align-items: center;
     justify-content: center;
     margin-bottom: 20px;
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
 }
 
 .carousel-items {
