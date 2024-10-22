@@ -499,6 +499,10 @@ body {
         margin-right: 10px; /* Space between arrow and text */
     }
 
+    .table-container {
+        margin-bottom: 100px;
+    }
+
     /* Rotate arrow when expanded */
     .expanded .expand-btn {
         transform: rotate(90deg);
