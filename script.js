@@ -42,6 +42,50 @@ collapseBtn.addEventListener('click', () => {
     }
 });
 
+// // Add event listener to the checkbox for dark mode
+// darkModeCheckbox.addEventListener('change', () => {
+//     // Toggle dark mode class on body and sidebar
+//     document.body.classList.toggle('dark-mode');
+//     sidebar.classList.toggle('dark-mode');
+
+//     // Toggle dark mode class on other elements if necessary
+//     const overviewCards = document.querySelectorAll('.overview-card');
+//     const chartContainers = document.querySelectorAll('.chart-container');
+//     const eventTables = document.querySelectorAll('.events-table');
+//     const modalContents = document.querySelectorAll('.modal-content');
+//     const navItems = document.querySelectorAll('.nav-item');
+//     const filters = document.querySelector('.filters');
+//     const filterInputs = document.querySelectorAll('.filters input[type="text"], .filters select');
+//     const resultsDisplay = document.querySelector('.results-display');
+//     const buttons = document.querySelectorAll('button');
+
+//     // Add for mobile navbar
+//     const mobileNavbar = document.querySelector('.mobile-navbar');
+//     if (mobileNavbar) {
+//         mobileNavbar.classList.toggle('dark-mode');
+//     }
+
+//     overviewCards.forEach(card => card.classList.toggle('dark-mode'));
+//     chartContainers.forEach(chart => chart.classList.toggle('dark-mode'));
+//     eventTables.forEach(table => table.classList.toggle('dark-mode'));
+//     modalContents.forEach(modal => modal.classList.toggle('dark-mode'));
+//     navItems.forEach(nav => nav.classList.toggle('dark-mode'));
+
+//     // Toggle dark mode for your filters section, inputs, and buttons
+//     filters.classList.toggle('dark-mode');
+//     filterInputs.forEach(input => input.classList.toggle('dark-mode'));
+//     resultsDisplay.classList.toggle('dark-mode');
+//     buttons.forEach(button => button.classList.toggle('dark-mode'));
+
+//     // Change button text based on mode
+//     if (document.body.classList.contains('dark-mode')) {
+//         darkModeCheckbox.nextElementSibling.textContent = ''; // Change to Light Mode
+//     } else {
+//         darkModeCheckbox.nextElementSibling.textContent = ''; // Change to Dark Mode
+//     }
+// });
+
+
 // Add event listener to the checkbox for dark mode
 darkModeCheckbox.addEventListener('change', () => {
     // Toggle dark mode class on body and sidebar
@@ -76,6 +120,16 @@ darkModeCheckbox.addEventListener('change', () => {
     filterInputs.forEach(input => input.classList.toggle('dark-mode'));
     resultsDisplay.classList.toggle('dark-mode');
     buttons.forEach(button => button.classList.toggle('dark-mode'));
+
+    // Handle icon change for dark mode
+    const icons = document.querySelectorAll('.icon, .icon2, .icon3, .icon4, .icon5, .downimg, .inforimg, #hamburger, .icona, .icon2a, .icon3a, .icon4a, .icon5a, .icon6a, .icon7a');
+    icons.forEach(icon => {
+        if (document.body.classList.contains('dark-mode')) {
+            icon.src = icon.getAttribute('data-dark'); // Use dark mode icon
+        } else {
+            icon.src = icon.getAttribute('data-light'); // Use light mode icon
+        }
+    });
 
     // Change button text based on mode
     if (document.body.classList.contains('dark-mode')) {
@@ -345,6 +399,23 @@ document.querySelectorAll('.event-row').forEach((row) => {
         openModal(eventData);
     });
 });
+
+
+// Select all nav links
+const navLinks = document.querySelectorAll('.nav-link');
+
+// Add click event listener to each link
+navLinks.forEach(link => {
+    link.addEventListener('click', function () {
+        // Remove active class from all links
+        navLinks.forEach(link => link.classList.remove('active'));
+
+        // Add active class to the clicked link
+        this.classList.add('active');
+    });
+});
+
+
 
 
 

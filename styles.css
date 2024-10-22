@@ -443,6 +443,10 @@ body {
     #arrow{
         display: none;
     }
+
+    .bottom-nav {
+        display: none;
+    }
 }
 
 
@@ -760,4 +764,19 @@ button:hover {
 
 
 
+    .cardlabel {
+        display: flex;
+    }
 
+
+.icona {
+    margin-right: 15px;
+}
+.icon2a, .icon3a, .icon4a{
+    width: 15px;
+    margin-right: 15px;
+}
+
+.icon5a, .icon6a, .icon7a {
+    margin-right: 10px;
+}

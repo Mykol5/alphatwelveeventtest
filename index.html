@@ -7,7 +7,10 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="stylesmobile.css">
     <link rel="stylesheet" href="dark-mode.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- Include Chart.js -->
 </head>
@@ -18,17 +21,92 @@
         <h4>Logo</h4>
     </div>
     <div class="menu-icon" id="menu-toggle">
-        <img src="/img/solar_hamburger-menu-broken.png" alt="Menu" id="hamburger">
+        <img src="/img/solar_hamburger-menu-broken.png" alt="Menu" id="hamburger"  data-light="/img/solar_hamburger-menu-broken.png" data-dark="/img/Vector (3).png">
         <img src="/img/Icon Button.png" alt="Close" id="close-icon" style="display: none;">
     </div>
 </div>
+
+    <!-- Bottom Navigation Bar -->
+    <!-- <div class="bottom-nav">
+        <a href="#home" class="nav-link active">
+            <i class="fas fa-home"></i>
+            <span>Home</span>
+        </a>
+        <a href="#events" class="nav-link">
+            <i class="fas fa-calendar-alt"></i>
+            <span>Events</span>
+        </a>
+        <a href="#speaker" class="nav-link">
+            <i class="fas fa-microphone"></i>
+            <span>Speaker</span>
+        </a>
+        <a href="#reports" class="nav-link">
+            <i class="fas fa-file-alt"></i>
+            <span>Reports</span>
+        </a>
+        <a href="#profile" class="nav-link">
+            <i class="fas fa-user"></i>
+            <span>Profile</span>
+        </a>
+    </div> -->
+
+
+<!-- Bottom Navigation Bar -->
+<div class="bottom-nav">
+    <a href="#home" class="nav-link active">
+        <img src="/img/Vector (1).png" alt="Home Icon" class="icon" data-light="/img/Vector (1).png" data-dark="/img/Vector (1).png">
+        <span>Home</span>
+    </a>
+    <a href="#events" class="nav-link">
+        <img src="/img/Group (3).png" alt="Events Icon" class="icon2" data-light="/img/Group (3).png" data-dark="/img/Group.png" class="icon2">
+        <span>Events</span>
+    </a>
+    <a href="#speaker" class="nav-link">
+        <img src="/img/Group (4).png" alt="Speaker Icon" class="icon3" data-light="/img/Group (4).png" data-dark="/img/Group (1).png">
+        <span>Speaker</span>
+    </a>
+    <a href="#reports" class="nav-link">
+        <img src="/img/Group (5).png" alt="Reports Icon" class="icon4" data-light="/img/Group (5).png" data-dark="/img/Group (6).png">
+        <span>Reports</span>
+    </a>
+    <a href="#profile" class="nav-link">
+        <img src="/img/user-circle.png" alt="Profile Icon" class="icon5" data-light="/img/user-circle.png" data-dark="/img/Vector (2).png">
+        <span>Profile</span>
+    </a>
+</div>
+
 
 <!-- Sidebar Navigation -->
 <div class="sidebar" id="sidebar">
     <div class="logo">
         <h4>Logo</h4>
     </div>
+
     <ul class="nav-items">
+        <li class="nav-item active">
+            <a href="#"><img src="/img/Vector (1).png" alt="Home Icon" class="icona" data-light="/img/Vector (1).png" data-dark="/img/Vector (1).png"> <span class="nav-text">Home</span></a>
+        </li>
+        <li class="nav-item">
+            <a href="#"><img src="/img/Group (3).png" alt="Events Icon" class="icon2a" data-light="/img/Group (3).png" data-dark="/img/Group.png" class="icon2"> <span class="nav-text">Events</span></a>
+        </li>
+        <li class="nav-item">
+            <a href="#"><img src="/img/Group (4).png" alt="Speaker Icon" class="icon3a" data-light="/img/Group (4).png" data-dark="/img/Group (1).png"><span class="nav-text">Speakers</span></a>
+        </li>
+        <li class="nav-item">
+            <a href="#"><img src="/img/Group (5).png" alt="Reports Icon" class="icon4a" data-light="/img/Group (5).png" data-dark="/img/Group (6).png"> <span class="nav-text">Reports</span></a>
+        </li>
+        <li class="nav-item">
+            <a href="#"><img src="/img/bell.png" alt="Profile Icon" class="icon5a" data-light="/img/bell.png" data-dark="/img/bell (1).png"> <span class="nav-text">Notifications</span></a>
+        </li>
+        <li class="nav-item">
+            <a href="#"><img src="/img/double-chat-bubble.png" alt="Profile Icon" class="icon6a" data-light="/img/double-chat-bubble.png" data-dark="/img/double-chat-bubble (1).png"> <span class="nav-text">Messages</span></a>
+        </li>
+        <li class="nav-item">
+            <a href="#"><img src="/img/settings-2.png" alt="Profile Icon" class="icon7a" data-light="/img/settings-2.png" data-dark="/img/settings-2 (1).png"> <span class="nav-text">Settings</span></a>
+        </li>
+    </ul>
+
+    <!-- <ul class="nav-items">
         <li class="nav-item active">
             <a href="#"><i class="fas fa-home"></i> <span class="nav-text">Home</span></a>
         </li>
@@ -47,7 +125,7 @@
         <li class="nav-item">
             <a href="#"><i class="fas fa-envelope"></i> <span class="nav-text">Messages</span></a>
         </li>
-    </ul>
+    </ul> -->
 
     <button id="collapse-btn">
         <span id="collapse-icon"><<</span> <span>Collapse</span>
@@ -83,7 +161,7 @@
         <!-- Overview Section -->
         <div class="overview">
             <div class="overview-card">
-                <h4>Total Events</h4>
+                <div class="cardlabel"><h4>Total Events <img src="/img/information (1).png" class="inforimg" data-light="/img/information (1).png" data-dark="/img/information.png"></h4></div>
                 <div class="stat-info">
                     <p>100,000</p>
                     <img src="/img/arrow-up-right.png" alt="arrow">
@@ -91,7 +169,7 @@
                 </div>
             </div>
             <div class="overview-card">
-                <h4>Active Speakers</h4>
+                <h4>Active Speakers <img src="/img/information (1).png" class="inforimg" data-light="/img/information (1).png" data-dark="/img/information.png"></h4>
                 <div class="stat-info2">
                     <p>25</p>
                     <img src="/img/arrow-down-right.png" alt="arrow">
@@ -99,7 +177,7 @@
                 </div>
             </div>
             <div class="overview-card">
-                <h4>Total Registrations</h4>
+                <h4>Total Registrations <img src="/img/information (1).png" class="inforimg" data-light="/img/information (1).png" data-dark="/img/information.png"></h4>
                 <div class="stat-info">
                     <p>300</p>
                     <img src="/img/arrow-up-right.png" alt="arrow">
@@ -107,7 +185,7 @@
                 </div>
             </div>
             <div class="overview-card">
-                <h4>Total Revenue</h4>
+                <h4>Total Revenue <img src="/img/information (1).png" class="inforimg" data-light="/img/information (1).png" data-dark="/img/information.png"></h4>
                 <div class="stat-info">
                     <p>$500,000</p>
                     <img src="/img/arrow-up-right.png" alt="arrow">
@@ -196,7 +274,7 @@
                         <!-- Button Section (export buttons) -->
                         <div class="button-container">
                             <button id="optionsBtn">:</button>
-                            <button id="exportBtn"><img src="/img/download.png">Export</button>
+                            <button id="exportBtn"><img src="/img/download.png" class="downimg" data-light="/img/download.png" data-dark="/img/download1.png">Export</button>
                         </div>
                     </div>
 
