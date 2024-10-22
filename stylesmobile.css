@@ -126,7 +126,7 @@ body {
     }
 
     .overview-card {
-        width: 91%; /* Full width of the screen */
+        width: 97%; /* Full width of the screen */
         margin-right: 0;
         margin-bottom: 10px; /* Add margin at the bottom between cards */
         border: 1px solid #ccc;
@@ -154,6 +154,7 @@ body {
     /* Chart and Carousel containers for mobile view */
     .chart-container, .carousel {
         width: 91%; /* Full width for both chart and carousel */
+        height: 100%;
         margin-bottom: 20px; /* Space between them */
         overflow-x: hidden;
     }
