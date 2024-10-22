@@ -270,6 +270,7 @@ body {
     position: relative;
 }
 
+
 .carousel-item {
     min-width: 100%;
     position: relative; /* For positioning the text inside the item */

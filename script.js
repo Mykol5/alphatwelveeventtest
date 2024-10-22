@@ -216,24 +216,37 @@ let currentIndex = 0;
 const items = document.querySelectorAll('.carousel-item');
 const prevBtn = document.getElementById('prev-btn');
 const nextBtn = document.getElementById('next-btn');
+const autoSlideIntervalTime = 5000; // Set interval time for auto-slide (e.g., 5 seconds)
+
+let autoSlideInterval = setInterval(autoSlide, autoSlideIntervalTime); // Start auto-sliding
 
 // Event listeners for next and previous buttons
 nextBtn.addEventListener('click', () => {
+    clearInterval(autoSlideInterval); // Stop auto-sliding when manually navigating
     currentIndex = (currentIndex + 1) % items.length; // Loop through slides
     updateCarousel();
+    autoSlideInterval = setInterval(autoSlide, autoSlideIntervalTime); // Restart auto-sliding
 });
 
 prevBtn.addEventListener('click', () => {
+    clearInterval(autoSlideInterval); // Stop auto-sliding when manually navigating
     currentIndex = (currentIndex - 1 + items.length) % items.length; // Loop backwards through slides
     updateCarousel();
+    autoSlideInterval = setInterval(autoSlide, autoSlideIntervalTime); // Restart auto-sliding
 });
 
-// Update the carousel based on current index
+// Update the carousel based on the current index
 function updateCarousel() {
     const offset = -currentIndex * 100; // Calculate the offset for the current slide
     items.forEach((item) => {
         item.style.transform = `translateX(${offset}%)`; // Move the items
     });
+}
+
+// Auto-slide functionality
+function autoSlide() {
+    currentIndex = (currentIndex + 1) % items.length; // Loop through slides automatically
+    updateCarousel();
 }
 
 // // Select the modal and close button
@@ -414,8 +427,3 @@ navLinks.forEach(link => {
         this.classList.add('active');
     });
 });
-
-
-
-
-
