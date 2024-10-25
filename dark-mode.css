@@ -936,10 +936,13 @@ button.dark-mode:hover {
         border-collapse: collapse; /* Remove double borders */
     }
     
+    /* .table-container {
+        width: 100%;
+    } */
 
     /* Adjust table layout for mobile view */
     .dark-mode .event-table {
-        width: 105%;
+        width: 110%;
     }
 
     /* Flexbox for the event row, showing Event and Status */
@@ -1230,7 +1233,7 @@ button.dark-mode:hover {
         /* Notification Badge Style */
         .dark-mode .notification-badge {
             position: absolute;
-            top: 243px;  /* Adjust based on your layout */
+            top: 232px;  /* Adjust based on your layout */
             right: 250px;  /* Adjust based on your layout */
             background-color: red;
             color: white;

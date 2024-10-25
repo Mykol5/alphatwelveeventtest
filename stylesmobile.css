@@ -96,7 +96,7 @@ body {
         /* Notification Badge Style */
         .notification-badge {
             position: absolute;
-            top: 208px;  /* Adjust based on your layout */
+            top: 198px;  /* Adjust based on your layout */
             right: 250px;  /* Adjust based on your layout */
             background-color: red;
             color: white;
@@ -404,7 +404,7 @@ body {
 @media (max-width: 480px) {
     .modal-content {
         width: 95%; /* Make modal take most of the screen width */
-        height: 45%;
+        height: 46.5%;
         padding: 15px; /* Reduce padding for smaller screens */
     }
 
@@ -737,5 +737,18 @@ body {
     .icon5 {
         margin-bottom: 4px;
         height: 25px;
+    }
+
+    .logo {
+        background-color: #93C5FD; /* Light purple color */
+        color: #2563EB;
+        font-size: 13px;
+        width: 70px; /* Set the desired width */
+        height: 30px; /* Set the desired height */
+        padding-left: 0px;
+        display: flex; /* Center content horizontally and vertically */
+        align-items: center; /* Center content vertically */
+        justify-content: center; /* Center content horizontally */
+        border-radius: 0px; /* Optional: add rounded corners */
     }
 }

@@ -12,6 +12,39 @@ body {
     overflow-x: hidden;
 }
 
+.logo {
+    background-color: #93C5FD; /* Light purple color */
+    color: #2563EB;
+    font-size: 13px;
+    width: 80px; /* Set the desired width */
+    height: 30px; /* Set the desired height */
+    padding-left: 0px;
+    display: flex; /* Center content horizontally and vertically */
+    align-items: center; /* Center content vertically */
+    
+    border-radius: 0px; /* Optional: add rounded corners */
+}
+
+.logo-text {
+    display: block; /* Default display */
+}
+
+/* Style for the collapsed state */
+.sidebar.collapsed .logo-text {
+    display: none; /* Hide the text when sidebar is collapsed */
+}
+/* Style for the collapsed state */
+.sidebar.collapsed .logo {
+    background-color: #93C5FD; /* Light purple color */
+    /* color: #2563EB;
+    font-size: 13px; */
+    width: 40px; /* Set the desired width */
+    height: 30px; /* Set the desired height */
+    padding-left: 0px;
+    border-radius: 0px;
+}
+
+
 /* Sidebar Styles */
 /* Sidebar Styles */
 .sidebar {
@@ -49,7 +82,7 @@ body {
 /* Notification Badge Style */
 .notification-badge {
     position: absolute;
-    top: 257px;  /* Adjust based on your layout */
+    top: 250px;  /* Adjust based on your layout */
     right: 20px;  /* Adjust based on your layout */
     background-color: red;
     color: white;
@@ -63,7 +96,7 @@ body {
 
 /* Adjust the position and size when the sidebar is collapsed */
 .sidebar.collapsed .notification-badge {
-    top: 250px;  /* Adjust for bell icon alignment */
+    top: 242px;  /* Adjust for bell icon alignment */
     right: 70px;  /* Make it closer to the bell icon */
     padding: 2px 4px;  /* Make the badge smaller */
     font-size: 5px;   /* Reduce font size */
