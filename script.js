@@ -164,17 +164,17 @@ darkModeCheckbox.addEventListener('change', () => {
 // });
 
 
-// Assuming you have a dark mode check in your code
-const isDarkMode = true; // or detect dark mode dynamically
+// Detect or set initial dark mode
+let isDarkMode = document.body.classList.contains('dark-mode');
 
+// Create chart context
 const ctx = document.getElementById('eventChart').getContext('2d');
 const eventChart = new Chart(ctx, {
     type: 'bar',
     data: {
         labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
         datasets: [{
-            label: '',
-            data: [1200, 1900, 3000, 5000, 2300, 3000, 5000, 2000, 3000, 4000, 2500, 3500],
+            data: [690, 950, 760, 400, 1000, 550, 820, 385, 810, 620, 970, 600],
             backgroundColor: '#8576FF',
             borderColor: '#7019e2',
             borderWidth: 1
@@ -184,31 +184,47 @@ const eventChart = new Chart(ctx, {
         scales: {
             x: {
                 ticks: {
-                    color: isDarkMode ? '#ffffff' : '#000000', // Changes the X-axis label color
+                    color: isDarkMode ? '#ffffff' : '#000000'
                 },
                 grid: {
-                    color: isDarkMode ? '#444' : '#grey' // Grid color for dark mode
+                    color: isDarkMode ? '#444444' : '#cccccc'
                 }
             },
             y: {
                 beginAtZero: true,
                 ticks: {
-                    color: isDarkMode ? '#ffffff' : '#000000', // Changes the Y-axis label color
+                    color: isDarkMode ? '#ffffff' : '#000000',
+                    stepSize: 200
                 },
                 grid: {
-                    color: isDarkMode ? '#444' : '#grey' // Grid color for dark mode
+                    color: isDarkMode ? '#444444' : '#cccccc'
                 }
             }
         },
         plugins: {
             legend: {
-                labels: {
-                    color: isDarkMode ? '#ffffff' : '#000000' // Changes the legend text color
-                }
+                display: false
             }
         }
     }
 });
+
+// Update chart colors function
+function updateChartColors() {
+    // Re-check dark mode status
+    isDarkMode = document.body.classList.contains('dark-mode');
+
+    // Update axis colors
+    eventChart.options.scales.x.ticks.color = isDarkMode ? '#ffffff' : '#000000';
+    eventChart.options.scales.x.grid.color = isDarkMode ? '#444444' : '#cccccc';
+    eventChart.options.scales.y.ticks.color = isDarkMode ? '#ffffff' : '#000000';
+    eventChart.options.scales.y.grid.color = isDarkMode ? '#444444' : '#cccccc';
+
+    // Apply changes
+    eventChart.update();
+}
+
+
 
 
 // Carousel Slider

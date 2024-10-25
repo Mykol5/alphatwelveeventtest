@@ -204,7 +204,7 @@ body.dark-mode {
 /* Chart Container */
 .chart-container.dark-mode {
     background-color: #6A6676; /* Dark background for chart container */
-    color: white;
+    /* color: white; */
     padding: 20px;
     margin-bottom: 20px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
@@ -821,6 +821,7 @@ button.dark-mode:hover {
     padding: 10px; /* Adjust padding for better touch targets */
     font-size: 12px; /* Font size adjustment for mobile */
     border-radius: 0px;
+    text-align: center;
 }
 
 /* Specific button widths */
@@ -838,6 +839,66 @@ button.dark-mode:hover {
     min-width: 90%; /* Minimum width for Delete and Complete buttons */
     margin-left: 5px;
 }
+
+}
+
+/* Responsive styles */
+@media (min-width: 481px) and (max-width: 768px) {
+    .dark-mode .modal-content {
+        width: 95%; /* Make modal take most of the screen width */
+        height: 60%;
+        padding: 25px; /* Reduce padding for smaller screens */
+    }
+
+    .dark-mode .modal-content h3 {
+        font-size: 18px; /* Smaller heading on mobile */
+        margin-bottom: -20px;
+    }
+
+    .dark-mode .modal-content p {
+        font-size: 14px; /* Smaller text on mobile */
+        margin-bottom: 15px;
+        margin-top: 35px;
+    }
+
+    .dark-mode .modal-actions {
+        flex-direction: column; /* Stack buttons vertically */
+        gap: 5px; /* Reduce gap between buttons */
+        text-align: center;
+    }
+
+        /* Action Buttons */
+    .dark-mode.modal-actions {
+        display: flex;
+        justify-content: space-between; /* Space between buttons */
+        align-items: center; /* Center buttons vertically */
+        margin-top: 0px; /* Margin above buttons */
+    }
+
+    /* Button styles */
+    .dark-mode.modal-actions button {
+        padding: 10px; /* Adjust padding for better touch targets */
+        font-size: 12px; /* Font size adjustment for mobile */
+        border-radius: 0px;
+        text-align: center;
+        color: white;
+    }
+
+    /* Specific button widths */
+    .dark-mode.edit-btn {
+        min-width: 100%; /* Minimum width for Edit button */
+        margin-left: 30px;
+    }
+
+    .dark-mode.delete-btn {
+        min-width: 100%; /* Minimum width for Delete and Complete buttons */
+        margin-right: 0px;
+    }
+
+    .dark-mode.complete-btn {
+        min-width: 100%; /* Minimum width for Delete and Complete buttons */
+        margin-left: 5px;
+    }
 
 }
 

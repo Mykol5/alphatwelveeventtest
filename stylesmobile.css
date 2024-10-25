@@ -173,6 +173,7 @@ body {
         height: 150%;
         margin-bottom: 20px; /* Space between them */
         overflow-x: hidden;
+        /* color: #181717; */
     }
 
     .carousel {
@@ -410,6 +411,73 @@ body {
     .modal-content h3 {
         font-size: 18px; /* Smaller heading on mobile */
         margin-bottom: -20px;
+        margin-left: 20px;
+    }
+
+    .modal-content p {
+        font-size: 14px; /* Smaller text on mobile */
+        margin-bottom: 15px;
+        margin-top: 35px;
+        margin-left: 20px;
+    }
+
+    .speakers {
+        margin-left: 20px;
+    }
+
+
+    .modal-actions {
+        flex-direction: column; /* Stack buttons vertically */
+        gap: 5px; /* Reduce gap between buttons */
+        
+    }
+
+    /* Action Buttons */
+    .modal-actions {
+        display: flex;
+        justify-content: space-between; /* Space between buttons */
+        align-items: center; /* Center buttons vertically */
+        margin-top: 0px; /* Margin above buttons */
+    }
+
+    /* Button styles */
+    .modal-actions button {
+        padding: 10px; /* Adjust padding for better touch targets */
+        font-size: 12px; /* Font size adjustment for mobile */
+        border-radius: 0px;
+        text-align: center;
+    }
+
+    /* Specific button widths */
+    .edit-btn {
+        min-width: 90%; /* Minimum width for Edit button */
+        margin-left: 30px;
+    }
+
+    .delete-btn {
+        min-width: 90%; /* Minimum width for Delete and Complete buttons */
+        margin-right: 0px;
+    }
+
+    .complete-btn {
+        min-width: 90%; /* Minimum width for Delete and Complete buttons */
+        margin-left: 5px;
+    }
+
+}
+
+
+/* Responsive styles */
+@media (min-width: 481px) and (max-width: 768px) {
+    .modal-content {
+        width: 95%; /* Make modal take most of the screen width */
+        height: 60%;
+        padding: 25px; /* Reduce padding for smaller screens */
+    }
+
+    .modal-content h3 {
+        font-size: 18px; /* Smaller heading on mobile */
+        margin-bottom: -20px;
     }
 
     .modal-content p {
@@ -424,36 +492,36 @@ body {
     }
 
     /* Action Buttons */
-.modal-actions {
-    display: flex;
-    justify-content: space-between; /* Space between buttons */
-    align-items: center; /* Center buttons vertically */
-    margin-top: 0px; /* Margin above buttons */
-}
+    .modal-actions {
+        display: flex;
+        justify-content: space-between; /* Space between buttons */
+        align-items: center; /* Center buttons vertically */
+        margin-top: 0px; /* Margin above buttons */
+    }
 
-/* Button styles */
-.modal-actions button {
-    padding: 10px; /* Adjust padding for better touch targets */
-    font-size: 12px; /* Font size adjustment for mobile */
-    border-radius: 0px;
-}
+    /* Button styles */
+    .modal-actions button {
+        padding: 10px; /* Adjust padding for better touch targets */
+        font-size: 12px; /* Font size adjustment for mobile */
+        border-radius: 0px;
+        text-align: center;
+    }
 
-/* Specific button widths */
-.edit-btn {
-    min-width: 90%; /* Minimum width for Edit button */
-    margin-left: 30px;
-}
+    /* Specific button widths */
+    .edit-btn {
+        min-width: 100%; /* Minimum width for Edit button */
+        margin-left: 30px;
+    }
 
-.delete-btn {
-    min-width: 90%; /* Minimum width for Delete and Complete buttons */
-    margin-right: 0px;
-}
+    .delete-btn {
+        min-width: 100%; /* Minimum width for Delete and Complete buttons */
+        margin-right: 0px;
+    }
 
-.complete-btn {
-    min-width: 90%; /* Minimum width for Delete and Complete buttons */
-    margin-left: 5px;
-}
-
+    .complete-btn {
+        min-width: 100%; /* Minimum width for Delete and Complete buttons */
+        margin-left: 5px;
+    }
 }
 
 
